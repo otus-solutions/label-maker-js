@@ -1,0 +1,5 @@
+<input class="no-print print-button button" type="button" value="Imprimir" onclick="window.print()">
+<div id="print-page" layout-align="start center" ng-if="$ctrl.loadComponents">
+  <participant-label base="$ctrl.baseInfo"></participant-label>
+  <tubes-label base="$ctrl.baseInfo" tube="tube" ng-repeat="tube in $ctrl.tubesList track by $index"></tubes-label>
+</div>

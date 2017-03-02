@@ -1,18 +1,18 @@
 (function() {
 
-  var baseDir = __dirname + '/app/index.html';
+  const baseDir = __dirname + '/app/index.html';
 
-  var gulp = require('gulp');
-  var browserSync = require('browser-sync').create();
-  var browserSyncSpa = require('browser-sync-middleware-spa');
-  var sonar = require('gulp-sonar');
-  var bump = require('gulp-bump');
-  var packageJson = require('./package.json');
-  var useref = require('gulp-useref');
-  var gulpif = require('gulp-if');
-  var uglify = require("gulp-uglify");
-  var minifyCss = require('gulp-minify-css');
-  var embedTemplates = require('gulp-angular-embed-templates');
+  const gulp = require('gulp');
+  const browserSync = require('browser-sync').create();
+  const browserSyncSpa = require('browser-sync-middleware-spa');
+  const sonar = require('gulp-sonar');
+  const bump = require('gulp-bump');
+  const packageJson = require('./package.json');
+  const useref = require('gulp-useref');
+  const gulpif = require('gulp-if');
+  const uglify = require("gulp-uglify");
+  const minifyCss = require('gulp-minify-css');
+  const embedTemplates = require('gulp-angular-embed-templates');
 
   gulp.task('compress', function() {
     return gulp.src('app/index.html')
@@ -24,7 +24,7 @@
       .pipe(gulpif('*.js', embedTemplates({
         basePath: __dirname + '/'
       })))
-      .pipe(gulpif('*.js', uglify()))
+      // .pipe(gulpif('app/**/*.js', uglify()))
       .pipe(gulpif('*.css', minifyCss()))
       .pipe(gulp.dest('dist/label-maker-js'));
   });
@@ -95,6 +95,5 @@
       })
       .pipe(sonar(options));
   });
-
 
 }());

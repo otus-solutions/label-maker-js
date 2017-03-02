@@ -15,19 +15,26 @@ module.exports = function(config) {
         // list of files / patterns to load in the browser
         files: [
             /* External dependencies */
-            //NODE_MODULES_ROOT_PATH + 'jquery/dist/jquery.min.js',
+	    NODE_MODULES_ROOT_PATH + 'angular/angular.min.js',
+            NODE_MODULES_ROOT_PATH + 'angular-mocks/angular-mocks.js',
+            NODE_MODULES_ROOT_PATH + 'jquery/dist/jquery.min.js',
+            NODE_MODULES_ROOT_PATH + 'angular-ui-router/release/angular-ui-router.min.js',
+            NODE_MODULES_ROOT_PATH + 'jsbarcode/dist/barcodes/JsBarcode.code39.min.js',
+            NODE_MODULES_ROOT_PATH + 'js-base64/base64.min.js',
+            NODE_MODULES_ROOT_PATH + 'node-uuid/uuid.js',
 
             APP_ROOT_PATH + 'app.js',
             APP_ROOT_PATH + '**/*-module.js',
             APP_ROOT_PATH + '**/*.js', {
                 pattern: 'tests/unit/**/*-spec.js',
+                pattern: 'tests/unit/**/example.js',
                 included: true
             }
         ],
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-        preprocessors: {
+       preprocessors: {
             'app/**/*.js': ['coverage']
         },
 
