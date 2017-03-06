@@ -17,7 +17,6 @@
       });
 
     $urlRouterProvider.otherwise('/index');
-    $locationProvider.html5Mode(true);
   }
 
 }());
