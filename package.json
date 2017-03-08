@@ -21,19 +21,19 @@
     "build": "gulp compress"
   },
   "dependencies": {
-    "angular": "1.5.9",
-    "angular-animate": "1.5.9",
-    "angular-aria": "1.5.9",
+    "angular": "1.5.8",
+    "angular-animate": "1.5.8",
+    "angular-aria": "1.5.8",
     "angular-bind-html-compile-ci-dev": "1.1.1",
-    "angular-material": "^1.0.9",
-    "angular-messages": "^1.5.0",
-    "angular-resource": "^1.6.1",
-    "angular-ui-router": "0.2.14",
-    "jquery": "^3.1.1",
+    "angular-material": "1.1.1",
+    "angular-messages": "1.5.8",
+    "angular-resource": "1.5.5",
+    "angular-ui-router": "^0.3.1",
+    "jquery": "2.2.0",
     "jsbarcode": "^3.5.7"
   },
   "devDependencies": {
-    "angular-mocks": "^1.4.9",
+    "angular-mocks": "1.4.9",
     "browser-sync": "2.11.2",
     "browser-sync-middleware-spa": "^1.0.0",
     "concurrently": "^1.0.0",
