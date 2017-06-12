@@ -47,7 +47,10 @@
 
       function _generateWindow() {
         var newWindow = $window.open('', '_blank'); //TODO pop-under
-        newWindow.document.write('<html><head><title>Etiquetas</title><base href="/otus/" /><link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/otusjs-label-page.min.css"/></head><body></body></html>');
+        /** Removed href to use in production server.
+            newWindow.document.write('<html><head><title>Etiquetas</title><base href="/otus/" /><link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/otusjs-label-page.min.css"/></head><body></body></html>');
+        **/
+        newWindow.document.write('<html><head><title>Etiquetas</title><link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/otusjs-label-page.min.css"/></head><body></body></html>');
         angular.element(newWindow.document.body)
         .append($element.contents());
       }
