@@ -1,7 +1,9 @@
 <div class="label">
   <div class="label-text">
     <p>{{$ctrl.tube.label}}</p>
-    <span>{{$ctrl.base.participant_name}}</span></br>
+    <div ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+      <span>{{$ctrl.base.participant_name}}</span></br>
+    </div>
     <span>NR:{{$ctrl.base.recruitment_number}}    Sexo:{{$ctrl.base.gender}}</span></br>
     <span>DN:{{$ctrl.base.birthday}}</span></br>
   </div>
