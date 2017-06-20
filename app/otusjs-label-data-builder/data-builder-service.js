@@ -53,17 +53,13 @@
       _tubesList = data.tubes;
     }
 
-    function pushInfo(json) {
-      if (json) {
-        var parse = _fromJson(json);
+    function pushInfo(labParticipant) {
+      if (labParticipant) {
+        var parse = labParticipant;
         _setInfo(parse);
       } else {
         fetchTubesData();
       }
-    }
-
-    function _fromJson(json) {
-      return JSON.parse(json);
     }
 
     function _getInfo() {

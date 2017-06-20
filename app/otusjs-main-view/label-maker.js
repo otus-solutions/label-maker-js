@@ -3,11 +3,11 @@
 
   angular
     .module('otusjs.labelMaker.setupView')
-    .component('setupComponent', {
-      templateUrl: 'app/otusjs-setup-view/setup-view-template.html',
+    .component('labelMaker', {
+      templateUrl: 'app/otusjs-main-view/main-view-template.html',
       controller: Controller,
       bindings: {
-        json: '='
+        labelData: '<'
       }
     });
 
@@ -35,7 +35,7 @@
 
     function generateLabelPage() {
       var scope = $rootScope.$new();
-      scope.json = self.json;
+      scope.labelData = self.labelData;
       var labelPage = $compile(LABEL_PAGE)(scope);
     }
 

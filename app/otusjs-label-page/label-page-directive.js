@@ -30,7 +30,7 @@
       function init() {
         self.baseInfo = {};
         self.tubesList = [];
-        LabelService.pushInfo($scope.$parent.json);
+        LabelService.pushInfo($scope.$parent.labelData);
         _setInfo();
       }
 
