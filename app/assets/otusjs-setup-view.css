@@ -1,0 +1,13 @@
+@page {
+  margin: 0mm;
+}
+
+* {
+  /*padding: 5px 3px 3px 5px;*/
+}
+
+#subheader {
+  width: 55mm;
+  height: 8mm;
+  position: relative;
+}
