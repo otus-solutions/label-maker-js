@@ -2,10 +2,10 @@
   <div class="label-text">
     <p>{{$ctrl.tube.label}}</p>
     <div ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-      <span>{{$ctrl.base.participant_name}}</span></br>
+      <span>{{$ctrl.BaseInfo.participant_name}}</span></br>
     </div>
-    <span>NR:{{$ctrl.base.recruitment_number}}    Sexo:{{$ctrl.base.gender}}</span></br>
-    <span>DN:{{$ctrl.base.birthday}}</span></br>
+    <span>NR:{{$ctrl.BaseInfo.recruitment_number}}    Sexo:{{$ctrl.BaseInfo.gender}}</span></br>
+    <span>DN:{{$ctrl.BaseInfo.birthday}}</span></br>
   </div>
   <svg id="{{$ctrl.tube.code}}" class="barcode"></svg>
 </div>
