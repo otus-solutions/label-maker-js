@@ -23,6 +23,7 @@
         var self = this;
 
         self.renderBarcode = renderBarcode;
+        self.BaseInfo = angular.copy(self.base);
 
         self.$onInit = function() {
           $compile($element.contents())($scope);
