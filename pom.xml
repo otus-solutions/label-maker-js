@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>label-maker-js</artifactId>
     <groupId>org.ccem.otus</groupId>
-    <version>1.0</version>
+    <version>1.1</version>
     <packaging>war</packaging>
     <name>Label Maker JS</name>
 
@@ -118,7 +118,6 @@
                                 <hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
                                 <versionTagPrefix>v</versionTagPrefix>
                             </flowInitContext>
-                            <squash>true</squash>
                             <scmCommentPrefix>[RELEASE]</scmCommentPrefix>
                         </configuration>
                     </plugin>
