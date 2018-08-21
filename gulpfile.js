@@ -61,21 +61,17 @@
       .pipe(gulp.dest('./'));
   });
 
-  gulp.task('sonar', function() {
+  gulp.task('sonar', function () {
     var options = {
       sonar: {
         host: {
           url: process.env.npm_config_sonarUrl,
         },
-        jdbc: {
-          url: process.env.npm_config_sonarDatabaseUrl,
-          username: process.env.npm_config_sonarDatabaseUsername,
-          password: process.env.npm_config_sonarDatabasePassword
-        },
-        projectKey: 'sonar:label-maker-js',
-        projectName: 'label-maker-js',
+        login: process.env.npm_config_sonarDatabaseUsername,
+        password: process.env.npm_config_sonarDatabasePassword,
+        projectKey: 'sonar:' + packageJson.name,
+        projectName: packageJson.name,
         projectVersion: packageJson.version,
-        // comma-delimited string of source directories
         sources: 'app',
         language: 'js',
         sourceEncoding: 'UTF-8',
@@ -91,8 +87,8 @@
     };
 
     return gulp.src('thisFileDoesNotExist.js', {
-        read: false
-      })
+      read: false
+    })
       .pipe(sonar(options));
   });
 
