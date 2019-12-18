@@ -46,7 +46,7 @@
       });
 
       function _generateWindow() {
-        var newWindow = $window.open('about:blank', '_blank'); //TODO pop-under
+        var newWindow = $window.open('about:blank', '_blank');
 
         newWindow.document.write('<html>' +
           '<head><title>Etiquetas</title>' +
