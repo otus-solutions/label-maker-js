@@ -64,30 +64,19 @@
   .no-print, .no-print * {
     visibility: visible;
   }
+
+  body {
+    margin: 2% 40%;
+  }
 }
 
-.print-button:hover {
-   overflow:auto;
-  background-color: #448AFF;
-  color: white;
-}
-
-.print-button {
+.button-print{
+  bottom: 5px;
+  right: 0;
   position: fixed;
-  left: 15em;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s;/* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
-  background-color: white;
-  color: black;
-  border: 2px solid #448AFF;
-  border-radius: 3px;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
-  width: 100px;
-  height: 40px;
+  background-color: #3883ff;
+}
+
+.material-icons.white {
+  color: #ffffff;
 }
