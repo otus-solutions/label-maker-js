@@ -1,6 +1,6 @@
 {
   "name": "label-maker-js",
-  "version": "0.0.1-SNAPSHOT",
+  "version": "1.2.0",
   "description": "Label Maker JS",
   "keywords": [
     "otus",
@@ -18,7 +18,8 @@
     "gulp": "gulp",
     "start": "npm run gulp browser-sync",
     "karma": "karma",
-    "build": "gulp compress"
+    "build": "gulp compress",
+    "production": "npm install && npm test && npm run build && npm prune --production"
   },
   "dependencies": {
     "angular": "1.5.8",
