@@ -37,6 +37,7 @@
       function _setInfo() {
         self.tubesList = LabelService.getTubesList();
         self.baseInfo = LabelService.getBaseInfo();
+        self.laboratoryInfo = LabelService.getLaboratoryInfo();
 
         self.loadComponents = true;
       }

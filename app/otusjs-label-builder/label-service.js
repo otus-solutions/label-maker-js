@@ -17,6 +17,7 @@
     /* Public Interface */
     self.getTubesList = getTubesList;
     self.getBaseInfo = getBaseInfo;
+    self.getLaboratoryInfo = getLaboratoryInfo;
     self.pushInfo = pushInfo;
 
     function _init() {
@@ -25,6 +26,10 @@
 
     function pushInfo(json) {
       return DataBuilderService.pushInfo(json);
+    }
+
+    function getLaboratoryInfo() {
+      return DataBuilderService.getLaboratoryInfo();
     }
 
     function getBaseInfo() {
