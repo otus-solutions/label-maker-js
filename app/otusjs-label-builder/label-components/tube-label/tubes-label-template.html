@@ -4,8 +4,14 @@
     <div ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>{{$ctrl.BaseInfo.participant_name}}</span></br>
     </div>
-    <span>NR:{{$ctrl.BaseInfo.recruitment_number}}    Sexo:{{$ctrl.BaseInfo.gender}}</span></br>
-    <span>DN:{{$ctrl.BaseInfo.birthday}}</span></br>
+    <div layout-align="space-between center" layout="row" flex>
+      <span>NR:{{$ctrl.BaseInfo.recruitment_number}}</span>
+      <span>Sexo:{{$ctrl.BaseInfo.gender}}</span>
+    </div>
+    <div layout-align="space-between center" layout="row" flex>
+      <span>DN:{{$ctrl.BaseInfo.birthday}}    </span>
+      <span ng-show="$ctrl.BaseInfo.laboratoryIdentification != null">Kit: {{$ctrl.BaseInfo.laboratoryIdentification}}</span>
+    </div>
   </div>
   <svg id="{{$ctrl.tube.code}}" class="barcode"></svg>
 </div>
