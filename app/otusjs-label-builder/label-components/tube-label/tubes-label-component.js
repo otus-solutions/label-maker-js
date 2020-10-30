@@ -25,9 +25,13 @@
 
     self.renderBarcode = renderBarcode;
     self.BaseInfo = angular.copy(self.base);
+    self.tubesRepeat = []
 
     self.$onInit = function() {
       $compile($element.contents())($scope);
+      for(var i = 0; i < self.tube.printStructure.quantity; i++) {
+        self.tubesRepeat.push(angular.copy(self.tube))
+      }
       renderBarcode();
     };
 
