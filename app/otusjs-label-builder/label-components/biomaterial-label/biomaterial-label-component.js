@@ -3,13 +3,14 @@
 
   angular
     .module('otusjs.labelMaker.labelBuilder.labelComponents')
-    .component('tubesLabel', {
+    .component('biomaterialLabel', {
       transclude: true,
-      templateUrl: 'app/otusjs-label-builder/label-components/tube-label/tubes-label-template.html',
+      templateUrl: 'app/otusjs-label-builder/label-components/biomaterial-label/biomaterial-label-template.html',
       controller: Controller,
       bindings: {
         base: '<',
-        tube: '<'
+        biomaterial: '<',
+        labelSize: '<'
       }
     });
 
@@ -25,19 +26,15 @@
 
     self.renderBarcode = renderBarcode;
     self.BaseInfo = angular.copy(self.base);
-    self.tubesRepeat = []
 
     self.$onInit = function() {
       $compile($element.contents())($scope);
-      for(var i = 0; i < self.tube.printStructure.quantity; i++) {
-        self.tubesRepeat.push(angular.copy(self.tube))
-      }
       renderBarcode();
     };
 
     function renderBarcode() {
-      var barcodeContainer = $element.find('svg')[0];
-      JsBarcode(barcodeContainer, self.tube.code, BARCODE_SETTINGS);
+      var barcodeContainer = $element.find('div');
+      JsBarcode(barcodeContainer, self.biomaterial.code, BARCODE_SETTINGS);
     }
   }
 }());

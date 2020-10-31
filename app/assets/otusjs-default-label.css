@@ -1,5 +1,5 @@
 /*default size*/
-.label {
+.default-label {
   width: 55mm;
   height: 23mm;
   margin-bottom: 3mm !important;
@@ -10,7 +10,7 @@
   line-height: 14px;
 }
 
-.label p {
+.default-label p {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 12px;
   line-height: 15px;
@@ -18,14 +18,14 @@
   letter-spacing: 0.1em;
 }
 
-.label .label-text {
+.default-label .label-text {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 10px;
   line-height: 15px;
   letter-spacing: 0.1em;
 }
 
-.label .barcode {
+.default-label .barcode {
   position: absolute;
   top: 70%;
   left: 50%;
@@ -33,3 +33,4 @@
   transform: translate(-50%, -5%) !important;
   background-color: white;
 }
+

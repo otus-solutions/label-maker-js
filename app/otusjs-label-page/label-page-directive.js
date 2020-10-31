@@ -29,16 +29,15 @@
 
       function init() {
         self.baseInfo = {};
-        self.tubesList = [];
+        self.materialList = [];
         LabelService.pushInfo($scope.$parent.labelData);
         _setInfo();
       }
 
       function _setInfo() {
-        self.tubesList = LabelService.getTubesList();
+        self.bioMaterialList = LabelService.getBioMaterialList();
         self.baseInfo = LabelService.getBaseInfo();
         self.laboratoryInfo = LabelService.getLaboratoryInfo();
-
         self.loadComponents = true;
       }
 

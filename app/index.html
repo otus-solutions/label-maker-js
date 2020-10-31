@@ -13,8 +13,9 @@
     <!-- endbuild -->
     <!-- build:js css/otusjs-label-page.min.css -->
     <link href="app/assets/otusjs-label-page.css" rel="stylesheet" />
+    <!-- endbuild -->
     <!-- build:js css/otusjs-label.min.css -->
-    <link href="app/assets/otusjs-label.css" rel="stylesheet" />
+    <link href="app/assets/otusjs-default-label.css" rel="stylesheet" />
     <!-- endbuild -->
 
     <title>Download de Etiquetas</title>
@@ -67,10 +68,9 @@
 
     <!-- LABEL COMPONENTS -->
     <script src="app/otusjs-label-builder/label-components/label-components-module.js" charset="utf-8"></script>
-    <script src="app/otusjs-label-builder/label-components/tube-label/tubes-label-component.js" charset="utf-8"></script>
-    <script src="app/otusjs-label-builder/label-components/participant-label/participant-label-component.js" charset="utf-8"></script>
-    <script src="app/otusjs-label-builder/label-components/unattached-laboratory-label/unattached-laboratory-label-component.js" charset="utf-8"></script>
+    <script src="app/otusjs-label-builder/label-components/biomaterial-label/biomaterial-label-component.js" charset="utf-8"></script>
     <script src="app/otusjs-label-builder/label-components/base-label/base-label-component.js" charset="utf-8"></script>
+    <script src="app/otusjs-label-builder/label-components/default-label/default-label-component.js" charset="utf-8"></script>
 
     <!-- ----------------------- -->
 
@@ -83,6 +83,7 @@
     <script src="app/otusjs-label-data-builder/data-builder-service.js" charset="utf-8"></script>
     <!-- END OTUSJS PLAYER -->
     <!-- endbuild -->
+    <label-maker></label-maker>
   </body>
 
 </html>

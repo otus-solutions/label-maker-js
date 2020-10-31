@@ -3,12 +3,14 @@
 
     angular
       .module('otusjs.labelMaker.labelBuilder.labelComponents')
-      .component('participantLabel', {
+      .component('defaultLabel', {
           transclude: true,
-          templateUrl: 'app/otusjs-label-builder/label-components/participant-label/participant-label-template.html',
+          templateUrl: 'app/otusjs-label-builder/label-components/default-label/default-label-template.html',
           controller: Controller,
           bindings: {
-            base: '<'
+            base: '<',
+            biomaterialList: '<',
+            labInfo: '='
           }
       });
 
@@ -32,7 +34,7 @@
 
         function renderBarcode() {
           var barcodeContainer = $element.find('svg')[0];
-          JsBarcode(barcodeContainer, self.base.recruitment_number, BARCODE_SETTINGS);
+          JsBarcode(barcodeContainer, self.BaseInfo.recruitment_number, BARCODE_SETTINGS);
         }
       }
 }());
