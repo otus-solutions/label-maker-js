@@ -1,3 +1,5 @@
 <div id="print-page" layout-align="start center" ng-if="$ctrl.loadComponents">
-  <base-label base="$ctrl.baseInfo" lab-info="$ctrl.laboratoryInfo" biomaterial-list="$ctrl.bioMaterialList[0]"></base-label>
+  <unattached-label base="$ctrl.laboratoryInfo"  ng-if="$ctrl.laboratoryInfo.laboratoryIdentification != null"/>
+  <participant-label base="$ctrl.baseInfo" ng-if="$ctrl.laboratoryInfo.laboratoryIdentification == null"/>
+  <biomaterial-label base="$ctrl.baseInfo" biomaterial-list="$ctrl.bioMaterialList" />
 </div>

@@ -29,7 +29,7 @@
 
       function init() {
         self.baseInfo = {};
-        self.materialList = [];
+        self.bioMaterialList = [];
         LabelService.pushInfo($scope.$parent.labelData);
         _setInfo();
       }

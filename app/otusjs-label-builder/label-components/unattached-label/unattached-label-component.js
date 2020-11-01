@@ -3,13 +3,12 @@
 
     angular
       .module('otusjs.labelMaker.labelBuilder.labelComponents')
-      .component('baseLabel', {
+      .component('unattachedLabel', {
           transclude: true,
-          templateUrl: 'app/otusjs-label-builder/label-components/base-label/base-label-template.html',
+          templateUrl: 'app/otusjs-label-builder/label-components/unattached-label/unattached-label-template.html',
           controller: Controller,
           bindings: {
             base: '<',
-            biomaterialList: '<',
             labInfo: '='
           }
       });
@@ -23,7 +22,7 @@
       function Controller($scope, $element, $compile) {
         var self = this;
 
-        self.BaseInfo = angular.copy(self.base);
+        self.baseInfo = angular.copy(self.base);
 
         self.$onInit = function() {
           $compile($element.contents())($scope);
