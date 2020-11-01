@@ -26,5 +26,16 @@
         fontSize: 10,
         //   backgroundColor: "",
         //   lineColor: "#000"
+      }).constant(
+      'BARCODE_BIGGER_SETTINGS', {
+        format: 'CODE39',
+        width: 0.4,
+        height: 20,
+        displayValue: true,
+        font: "monospace",
+        textAlign: "center",
+        fontSize: 10,
+        //   backgroundColor: "",
+        //   lineColor: "#000"
       });
 }());

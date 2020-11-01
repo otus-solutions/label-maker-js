@@ -1,20 +1,20 @@
 <!--participant-->
-<div ng-show="$ctrl.componentLabel == 'participant'" class="small-label">
+<div ng-show="$ctrl.componentLabel == 'participant'" class="bigger-label">
   <svg id="participant" class="barcode"></svg>
 </div>
 
 
 <!--biomaterial-->
-<div ng-show="$ctrl.componentLabel == 'biomaterial'" layout="row" class="small-label">
-  <div class="small-useble-label">
-    <svg id="biomaterial" class="barcode"></svg>
+<div ng-show="$ctrl.componentLabel == 'biomaterial'" layout="column" class="bigger-label">
+  <div>
+    <span>{{$ctrl.biomaterial.code}}</span></br>
   </div>
-  <div class="small-unuseble-label"></div>
+  <svg id="biomaterial" class="barcode"></svg>
 </div>
 
 <!--unattached-->
-<div ng-show="$ctrl.componentLabel == 'unattached'" class="small-label">
-  <div class="small-label-text">
+<div ng-show="$ctrl.componentLabel == 'unattached'" class="bigger-label">
+  <div class="bigger-label-text">
     <p>Laboratório</p>
     <span>Centro:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span></br>
     <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
