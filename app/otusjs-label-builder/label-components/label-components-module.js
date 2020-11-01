@@ -18,12 +18,12 @@
     ).constant(
       'BARCODE_SMALL_SETTINGS', {
         format: 'CODE39',
-        width: 0.3,
-        height: 27,
+        width: 0.4,
+        height: 20,
         displayValue: true,
         font: "monospace",
         textAlign: "center",
-        fontSize: 0.8,
+        fontSize: 10,
         //   backgroundColor: "",
         //   lineColor: "#000"
       });
