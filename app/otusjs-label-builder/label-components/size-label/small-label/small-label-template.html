@@ -9,8 +9,18 @@
 
 
 <!--biomaterial-->
-<div ng-show="$ctrl.componentLabel == 'biomaterial'" layout="row" class="small-label">
-  <div class="small-useble-label">
+<div ng-show="$ctrl.componentLabel == 'biomaterial'" layout="row" style="
+  width: 41.27mm;
+  height: 15.87mm;
+  margin-bottom: 3mm !important;
+  margin-left: 0.625mm;
+  margin-right: 0.625mm;
+  position: relative;
+  padding: 2px;
+  line-height: 14px;">
+  <div style="
+  width: 25.4mm;
+  background: #3883ff;">
     <div>
       <span>{{$ctrl.material.label}}</span>
     </div>
@@ -22,7 +32,9 @@
     </div>
     <svg id="biomaterial" class="barcode"></svg>
   </div>
-  <div class="small-unuseble-label">here</div>
+  <div style="
+  width: 15.87mm;
+  background: red;">here</div>
 </div>
 
 <!--unattached-->
