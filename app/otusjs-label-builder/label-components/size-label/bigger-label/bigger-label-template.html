@@ -1,10 +1,6 @@
 <!--participant-->
 <div ng-show="$ctrl.componentLabel == 'participant'" class="small-label">
-  <div class="small-useble-label">
-    part.
-    <svg id="participant" class="barcode"></svg>
-  </div>
-  <div class="small-unuseble-label"></div>
+  <svg id="participant" class="barcode"></svg>
 </div>
 
 
@@ -18,10 +14,11 @@
 
 <!--unattached-->
 <div ng-show="$ctrl.componentLabel == 'unattached'" class="small-label">
-  <div class="small-useble-label">
-    <p>lab.</p>
-    <svg id="unattached" class="barcode"></svg>
+  <div class="small-label-text">
+    <p>Laboratório</p>
+    <span>Centro:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span></br>
+    <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
   </div>
-  <div class="small-unuseble-label"></div>
+  <svg id="unattached" class="barcode"></svg>
 </div>
 

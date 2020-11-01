@@ -3,9 +3,9 @@
 
     angular
       .module('otusjs.labelMaker.labelBuilder.labelComponents')
-      .component('smallLabel', {
+      .component('biggerLabel', {
           transclude: true,
-          templateUrl: 'app/otusjs-label-builder/label-components/size-label/small-label/small-label-template.html',
+          templateUrl: 'app/otusjs-label-builder/label-components/size-label/bigger-label/bigger-label-template.html',
           controller: Controller,
           bindings: {
             componentLabel: "<",
@@ -18,7 +18,7 @@
         '$scope',
         '$element',
         '$compile',
-        'BARCODE_SMALL_SETTINGS'
+        'BARCODE_BIGGER_SETTINGS'
       ];
 
       function Controller($scope, $element, $compile, BARCODE_SETTINGS) {
@@ -29,6 +29,7 @@
 
         self.$onInit = function() {
           $compile($element.contents())($scope);
+          console.info("here")
           renderBarcode();
         };
 

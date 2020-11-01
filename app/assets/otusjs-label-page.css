@@ -1,5 +1,5 @@
 @page {
-  size: 41.27mm 15.87mm;
+  size: 16mm 42mm;
   margin: 0mm;
 }
 
@@ -83,14 +83,10 @@
 }
 
 /*small size*/
-
-@media print {
-
-}
 .small-label {
   width: 41.27mm;
   height: 15.87mm;
-  margin-bottom: 3mm !important;
+  margin-bottom: 30mm !important;
   margin-left: 6.25mm;
   margin-right: 6.25mm;
   position: relative;
@@ -126,6 +122,53 @@
 }
 
 .small-label .barcode {
+  position: absolute;
+  left: 30%;
+  bottom: 0;
+  transform: translate(-50%, -5%) !important;
+  background-color: white;
+}
+
+/*bigger size*/
+.bigger-label {
+  width: 41.27mm;
+  height: 15.87mm;
+  margin-bottom: 30mm !important;
+  margin-left: 6.25mm;
+  margin-right: 6.25mm;
+  position: relative;
+  /* margin: auto; */
+  padding: 2px;
+  line-height: 14px;
+  border-radius: 10mm;
+}
+
+.bigger-useble-label {
+  width: 25.4mm;
+  background: #3883ff;
+}
+
+.bigger-unuseble-label {
+  width: 15.87mm;
+  background: red;
+}
+
+.bigger-label p {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+}
+
+.bigger-label .label-text {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
+
+.bigger-label .barcode {
   position: absolute;
   left: 30%;
   bottom: 0;
