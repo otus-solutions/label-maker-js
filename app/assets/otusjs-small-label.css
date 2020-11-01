@@ -14,10 +14,12 @@
 
 .small-useble-label {
   width: 25.4mm;
+  background: #3883ff;
 }
 
 .small-unuseble-label {
   width: 15.87mm;
+  background: red;
 }
 
 .small-label p {

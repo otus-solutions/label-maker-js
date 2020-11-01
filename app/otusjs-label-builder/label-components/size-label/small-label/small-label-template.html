@@ -17,9 +17,12 @@
     <div ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>{{$ctrl.baseInfo.participant_name}}</span></br>
     </div>
+    <div layout="row" flex>
+      <span>NR:{{$ctrl.baseInfo.recruitment_number}}</span>
+    </div>
     <svg id="biomaterial" class="barcode"></svg>
   </div>
-  <div class="small-unuseble-label"></div>
+  <div class="small-unuseble-label">here</div>
 </div>
 
 <!--unattached-->
