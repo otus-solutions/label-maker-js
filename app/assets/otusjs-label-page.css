@@ -1,5 +1,5 @@
 @page {
-  size: 16mm 42mm;
+  size: 42mm 16mm;
   margin: 0mm;
 }
 
@@ -86,9 +86,7 @@
 .small-label {
   width: 41.27mm;
   height: 15.87mm;
-  margin-bottom: 30mm !important;
-  margin-left: 6.25mm;
-  margin-right: 6.25mm;
+  margin-bottom: 3mm !important;
   position: relative;
   /* margin: auto; */
   padding: 2px;
@@ -133,9 +131,7 @@
 .bigger-label {
   width: 41.27mm;
   height: 15.87mm;
-  margin-bottom: 30mm !important;
-  margin-left: 6.25mm;
-  margin-right: 6.25mm;
+  margin-bottom: 3mm !important;
   position: relative;
   /* margin: auto; */
   padding: 2px;
