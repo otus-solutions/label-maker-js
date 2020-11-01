@@ -5,10 +5,10 @@
 
 
 <!--biomaterial-->
-<div ng-show="$ctrl.componentLabel == 'biomaterial'" layout="column" class="bigger-label">
-  <div>
-    <span>{{$ctrl.biomaterial.code}}</span></br>
-  </div>
+<div ng-show="$ctrl.componentLabel == 'biomaterial'"
+     layout="column" layout-align="center center" class="bigger-label">
+  <p>{{$ctrl.biomaterial.label}}</p>
+
   <svg id="biomaterial" class="barcode"></svg>
 </div>
 

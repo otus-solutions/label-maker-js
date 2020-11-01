@@ -30,7 +30,7 @@
       'BARCODE_BIGGER_SETTINGS', {
         format: 'CODE39',
         width: 0.4,
-        height: 20,
+        height: 30,
         displayValue: true,
         font: "monospace",
         textAlign: "center",
