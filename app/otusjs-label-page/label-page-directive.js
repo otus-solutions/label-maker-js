@@ -37,8 +37,9 @@
       function _setInfo() {
         self.bioMaterialList = LabelService.getBioMaterialList();
         self.baseInfo = LabelService.getBaseInfo();
-        console.info(self.baseInfo)
+        console.info(self.bioMaterialList)
         self.laboratoryInfo = LabelService.getLaboratoryInfo();
+        console.info("label-page: ",self.laboratoryInfo)
         self.loadComponents = true;
       }
 

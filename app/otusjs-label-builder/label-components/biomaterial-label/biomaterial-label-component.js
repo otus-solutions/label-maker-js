@@ -24,7 +24,7 @@
 
     self.baseInfo = angular.copy(self.base);
     self.$onInit = function() {
-      console.info(self.bioMaterialList)
+      console.info("biomateriallabel: ", self.bioMaterialList)
       $compile($element.contents())($scope);
     };
   }
