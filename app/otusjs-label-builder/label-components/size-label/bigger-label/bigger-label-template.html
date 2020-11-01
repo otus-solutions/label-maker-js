@@ -6,9 +6,14 @@
 
 <!--biomaterial-->
 <div ng-show="$ctrl.componentLabel == 'biomaterial'"
-     layout="column" layout-align="center center" class="bigger-label">
+     layout="column" layout-align="start center" class="bigger-label">
   <p>{{$ctrl.biomaterial.label}}</p>
-
+  <div ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+    <span>{{$ctrl.baseInfo.participant_name}}</span></br>
+  </div>
+  <div ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+    <span>NR: {{$ctrl.baseInfo.recruitment_number}}</span></br>
+  </div>
   <svg id="biomaterial" class="barcode"></svg>
 </div>
 

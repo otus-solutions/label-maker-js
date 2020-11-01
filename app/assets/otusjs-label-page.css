@@ -1,5 +1,5 @@
 @page {
-  size: 40mm 40mm;
+  size: 42mm 42mm;
   margin: 0mm;
 }
 
@@ -121,8 +121,7 @@
 
 .small-label .barcode {
   position: absolute;
-  top: 70%;
-  left: 50%;
+  left: 30%;
   bottom: 0;
   transform: translate(-50%, -5%) !important;
   background-color: white;
@@ -132,7 +131,7 @@
 .bigger-label {
   width: 40mm;
   height: 40mm;
-  margin-bottom: 3mm !important;
+  margin-bottom: 0.60mm !important;
   position: relative;
   /* margin: auto; */
   padding: 2px;
@@ -158,7 +157,8 @@
 
 .bigger-label .barcode {
   position: absolute;
-  left: 30%;
+  top: 50%;
+  left: 50%;
   bottom: 0;
   transform: translate(-50%, -5%) !important;
   background-color: white;
