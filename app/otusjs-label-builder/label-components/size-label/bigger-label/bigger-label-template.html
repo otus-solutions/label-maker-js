@@ -1,6 +1,14 @@
 <!--participant-->
-<div ng-show="$ctrl.componentLabel == 'participant'" class="bigger-label">
-  <svg id="participant" class="barcode"></svg>
+<div ng-show="$ctrl.componentLabel == 'participant'"
+     layout="column" layout-align="start center" class="bigger-label">
+  <p>{{$ctrl.baseInfo.participant_name}}</p>
+  <div ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+    <span>{{$ctrl.baseInfo.recruitment_number}}</span></br>
+  </div>
+  <div ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+    <span>DN: {{$ctrl.baseInfo.birthday}}</span></br>
+  </div>
+  <svg id="biomaterial" class="barcode"></svg>
 </div>
 
 
@@ -18,6 +26,15 @@
 </div>
 
 <!--unattached-->
+<div ng-show="$ctrl.componentLabel == 'biomaterial'"
+     layout="column" layout-align="start center" class="bigger-label">
+  <div class="bigger-label-text">
+    <p>Laboratório</p>
+    <span>Centro:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span></br>
+    <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
+  </div>
+  <svg id="biomaterial" class="barcode"></svg>
+</div>
 <div ng-show="$ctrl.componentLabel == 'unattached'" class="bigger-label">
   <div class="bigger-label-text">
     <p>Laboratório</p>
