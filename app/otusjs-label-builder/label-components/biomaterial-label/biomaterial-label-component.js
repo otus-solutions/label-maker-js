@@ -23,8 +23,8 @@
     var self = this;
 
     self.baseInfo = angular.copy(self.base);
-    console.info(self.bioMaterialList)
     self.$onInit = function() {
+      console.info(self.bioMaterialList)
       $compile($element.contents())($scope);
     };
   }
