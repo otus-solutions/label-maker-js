@@ -68,7 +68,7 @@
           const qrcodeContainer = $element.find(`#${elementId}`)[0]
           qr.addData(datastring);
           qr.make();
-          qrcodeContainer.innerHTML = qr.createSvgTag(2)
+          qrcodeContainer.innerHTML = qr.createSvgTag(1.5)
         }
       }
 }());
