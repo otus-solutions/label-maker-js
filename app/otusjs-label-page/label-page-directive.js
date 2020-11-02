@@ -38,7 +38,7 @@
         self.bioMaterialList = LabelService.getBioMaterialList();
         self.baseInfo = LabelService.getBaseInfo();
         self.laboratoryInfo = LabelService.getLaboratoryInfo();
-        console.info("label-page: ",self.laboratoryInfo)
+
         self.loadComponents = true;
       }
 

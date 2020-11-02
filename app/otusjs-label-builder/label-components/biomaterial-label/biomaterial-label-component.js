@@ -9,7 +9,7 @@
       controller: Controller,
       bindings: {
         base: '<',
-        biomaterialList: '<'
+        biomaterial: '<'
       }
     });
 
@@ -23,8 +23,8 @@
     var self = this;
 
     self.baseInfo = angular.copy(self.base);
+
     self.$onInit = function() {
-      console.info("biomateriallabel ", self.bioMaterialList)
       $compile($element.contents())($scope);
     };
   }
