@@ -26,7 +26,7 @@
 
     self.$onInit = function() {
       $compile($element.contents())($scope);
-      console.info(self.baseInfo.printStructure)
+      console.info(self.baseInfo.printStructure.labelSize.value)
     };
   }
 }());
