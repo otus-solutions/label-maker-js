@@ -36,7 +36,7 @@
 
         function renderBarcode() {
           const barcodeContainer = $element.find(`svg`);
-          const qrcodeContainer = $element.find("#biomaterialqr");
+          const qrcodeContainer = $element.find("#biomaterialqr")[0];
           console.info(qrcodeContainer)
           const qr = qrcode(4, 'L')
           qr.addData('hi')
