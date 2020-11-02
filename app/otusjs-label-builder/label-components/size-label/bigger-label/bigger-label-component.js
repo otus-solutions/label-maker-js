@@ -36,12 +36,12 @@
 
         function renderBarcode() {
           const barcodeContainer = $element.find(`svg`);
-          const qrcodeContainer = $element.find("#biomaterial");
+          const qrcodeContainer = $element.find("#biomaterialqr");
           console.info(qrcodeContainer)
           const qr = qrcode(4, 'L')
           qr.addData('hi')
           qr.make()
-
+          qrcodeContainer.prepend(qr.createImgTag())
           if(self.componentLabel == 'participant') {
             JsBarcode(barcodeContainer[0], self.baseInfo.recruitment_number, BARCODE_SETTINGS);
           }else if(self.componentLabel == 'biomaterial') {
