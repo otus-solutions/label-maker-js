@@ -33,23 +33,18 @@
         };
 
         function renderBarcode() {
-          const barcodeContainer = $element.find(`svg`);
-          for(var i = 0; i < barcodeContainer.length; i++) {
-            if(barcodeContainer[i].id == "participant" &&
-               self.componentLabel == 'participant') {
-              JsBarcode(barcodeContainer[i], self.baseInfo.recruitment_number, BARCODE_DEFAULT_SETTINGS);
-            }
-
-            if(barcodeContainer[i].id == "biomaterial" &&
-               self.componentLabel == 'biomaterial') {
-              JsBarcode(barcodeContainer[i], self.biomaterial.code, BARCODE_DEFAULT_SETTINGS);
-            }
-
-            if(barcodeContainer[i].id == "unattached" &&
-               self.componentLabel == 'unattached') {
-              JsBarcode(barcodeContainer[i], self.baseInfo.laboratoryIdentification, BARCODE_DEFAULT_SETTINGS)
-            }
-          }
+          const barcodeContainer = $element.find(`svg`)[0];
+          // for(var i = 0; i < barcodeContainer.length; i++) {
+          //   if(barcodeContainer[i].id == "participant" &&
+          //      self.componentLabel == 'participant') {
+          //     JsBarcode(barcodeContainer[i], self.baseInfo.recruitment_number, BARCODE_DEFAULT_SETTINGS);
+          //   }
+          JsBarcode(barcodeContainer[i], self.biomaterial.code, BARCODE_DEFAULT_SETTINGS);
+            //
+            // if(barcodeContainer[i].id == "unattached" &&
+            //    self.componentLabel == 'unattached') {
+            //   JsBarcode(barcodeContainer[i], self.baseInfo.laboratoryIdentification, BARCODE_DEFAULT_SETTINGS)
+            // }
         }
       }
 }());
