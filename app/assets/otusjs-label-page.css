@@ -92,16 +92,16 @@
   padding: 2px;
   line-height: 14px;
   border-radius: 10mm;
+  background: #fff;
 }
 
 .small-useble-label {
   width: 25.4mm;
-  background: #3883ff;
 }
 
 .small-unuseble-label {
   width: 15.87mm;
-  background: red;
+  background: gainsboro;
 }
 
 .small-label p {
@@ -140,7 +140,6 @@
   padding: 2px;
   line-height: 14px;
   border-radius: 10mm;
-  background: aqua;
 }
 
 .bigger-label p {

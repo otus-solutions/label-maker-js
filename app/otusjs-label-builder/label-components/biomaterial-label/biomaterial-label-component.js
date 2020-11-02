@@ -26,7 +26,6 @@
     self.labelSize = self.baseInfo.printStructure.labelSize.value;
 
     self.$onInit = function() {
-      console.info(self.labelSize)
       $compile($element.contents())($scope);
     };
   }
