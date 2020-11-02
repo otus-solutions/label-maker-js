@@ -32,7 +32,6 @@
     "angular-ui-router": "0.3.1",
     "jquery": "2.2.0",
     "jsbarcode": "3.5.7",
-    "qrcode": "^1.4.4",
     "qrcode-generator": "^1.4.4"
   },
   "devDependencies": {
