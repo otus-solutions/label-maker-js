@@ -4,10 +4,14 @@
                    base="$ctrl.baseInfo"
                    component-label="'biomaterial'"/>
   </div>
-  <small-label  biomaterial="$ctrl.biomaterial"
-                base="$ctrl.baseInfo"
-                component-label="'biomaterial'"/>
-<!--  <bigger-label biomaterial="$ctrl.biomaterial"-->
-<!--                base="$ctrl.baseInfo"-->
-<!--                component-label="'biomaterial'"/>-->
+  <div ng-show="$ctrl.labelSize == 'small'">
+    <small-label  biomaterial="$ctrl.biomaterial"
+                  base="$ctrl.baseInfo"
+                  component-label="'biomaterial'"/>
+  </div>
+  <div ng-show="$ctrl.labelSize == 'bigger'">
+    <bigger-label biomaterial="$ctrl.biomaterial"
+                  base="$ctrl.baseInfo"
+                  component-label="'biomaterial'"/>
+  </div>
 </div>
