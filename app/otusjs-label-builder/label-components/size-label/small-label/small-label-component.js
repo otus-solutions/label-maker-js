@@ -68,7 +68,7 @@
           const qrcodeContainer = $element.find(`#${elementId}`)[0]
           qr.addData(datastring);
           qr.make();
-          qrcodeContainer.innerHTML = qr.createImgTag()
+          qrcodeContainer.innerHTML = qr.createImgTag(1)
         }
       }
 }());
