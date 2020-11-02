@@ -1,5 +1,5 @@
 <div id="print-page" layout-align="start center" ng-if="$ctrl.loadComponents">
-  <participant-label base="$ctrl.baseInfo" ng-if="$ctrl.laboratoryInfo.laboratoryIdentification == null || $ctrl.baseInfo.printStructure.identified.value"></participant-label>
+  <participant-label base="$ctrl.baseInfo" ng-if="$ctrl.laboratoryInfo.laboratoryIdentification == null && $ctrl.baseInfo.printStructure.identified.value"></participant-label>
   <unattached-label base="$ctrl.laboratoryInfo" ng-if="$ctrl.laboratoryInfo.laboratoryIdentification != null"></unattached-label>
   <biomaterial-label base="$ctrl.baseInfo" biomaterial="biomaterial" ng-repeat="biomaterial in $ctrl.bioMaterialList track by $index"></biomaterial-label>
 </div>
