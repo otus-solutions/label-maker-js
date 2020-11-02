@@ -23,6 +23,7 @@
         var self = this;
 
         self.baseInfo = angular.copy(self.base);
+        self.labelSize = self.baseInfo.printStructure.labelSize.value;
 
         self.$onInit = function() {
           $compile($element.contents())($scope);
