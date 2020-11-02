@@ -26,21 +26,49 @@
 
         self.renderBarcode = renderBarcode;
         self.baseInfo = angular.copy(self.base);
+        self.type = self.baseInfo.printStructure.type.value;
 
         self.$onInit = function() {
           $compile($element.contents())($scope);
-          renderBarcode();
+          if(self.type == 'qrcode') {
+            renderQrcode();
+          }else if(self.type == 'barcode') {
+            renderBarcode();
+          }
         };
 
         function renderBarcode() {
-          const barcodeContainer = $element.find(`svg`);
           if(self.componentLabel == 'participant') {
-            JsBarcode(barcodeContainer[0], self.baseInfo.recruitment_number, BARCODE_SETTINGS);
+            const barcodeContainer = $element.find('#participantbarcode')[0];
+            JsBarcode(barcodeContainer, self.baseInfo.recruitment_number, BARCODE_SETTINGS);
           }else if(self.componentLabel == 'biomaterial') {
-            JsBarcode(barcodeContainer[1], self.biomaterial.code, BARCODE_SETTINGS)
+            const barcodeContainer = $element.find('#biomaterialbarcode')[0];
+            JsBarcode(barcodeContainer, self.biomaterial.code, BARCODE_SETTINGS)
           }else if(self.componentLabel == 'unattached') {
-            JsBarcode(barcodeContainer[2], self.biomaterial.code, BARCODE_SETTINGS)
+            const barcodeContainer = $element.find('#unattachedbarcode')[0];
+            JsBarcode(barcodeContainer, self.baseInfo.laboratoryIdentification, BARCODE_SETTINGS)
           }
+        }
+
+        function renderQrcode() {
+          var typeNumber = 2;
+          var errorCorrectionLevel = 'L';
+          var qr = qrcode(typeNumber, errorCorrectionLevel);
+
+          if(self.componentLabel == 'participant'){
+            addQrIntoElement(qr, "participantqr", self.baseInfo.recruitment_number.toString())
+          }else if(self.componentLabel == 'biomaterial') {
+            addQrIntoElement(qr, "biomaterialqr", self.biomaterial.code)
+          }else if(self.componentLabel == 'unattached') {
+            addQrIntoElement(qr, 'unattachedqr', self.baseInfo.laboratoryIdentification)
+          }
+        }
+
+        function addQrIntoElement(qr, elementId, datastring){
+          const qrcodeContainer = $element.find(`#${elementId}`)[0]
+          qr.addData(datastring);
+          qr.make();
+          qrcodeContainer.innerHTML = qr.createImgTag()
         }
       }
 }());
