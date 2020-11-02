@@ -24,6 +24,8 @@
         self.baseInfo = angular.copy(self.base);
 
         self.$onInit = function() {
+
+          console.info(self.baseInfo)
           $compile($element.contents())($scope);
         };
 

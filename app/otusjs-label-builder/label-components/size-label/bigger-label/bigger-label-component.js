@@ -35,21 +35,12 @@
 
         function renderBarcode() {
           const barcodeContainer = $element.find(`svg`);
-          for(var i = 0; i < barcodeContainer.length; i++) {
-            if(barcodeContainer[i].id == "participant" &&
-               self.componentLabel == 'participant') {
-              JsBarcode(barcodeContainer[i], self.baseInfo.recruitment_number, BARCODE_SETTINGS);
-            }
-
-            if(barcodeContainer[i].id == "biomaterial" &&
-               self.componentLabel == 'biomaterial') {
-              JsBarcode(barcodeContainer[i], self.biomaterial.code, BARCODE_SETTINGS);
-            }
-
-            if(barcodeContainer[i].id == "unattached" &&
-               self.componentLabel == 'unattached') {
-              JsBarcode(barcodeContainer[i], self.baseInfo.laboratoryIdentification, BARCODE_SETTINGS)
-            }
+          if(self.componentLabel == 'participant') {
+            JsBarcode(barcodeContainer[0], self.baseInfo.recruitment_number, BARCODE_DEFAULT_SETTINGS);
+          }else if(self.componentLabel == 'biomaterial') {
+            JsBarcode(barcodeContainer[1], self.biomaterial.code, BARCODE_DEFAULT_SETTINGS)
+          }else if(self.componentLabel == 'unattached') {
+            JsBarcode(barcodeContainer[2], self.biomaterial.code, BARCODE_DEFAULT_SETTINGS)
           }
         }
       }
