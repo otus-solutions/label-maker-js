@@ -2,7 +2,7 @@
 <!--  <default-label biomaterial="$ctrl.biomaterial"-->
 <!--                 base="$ctrl.baseInfo"-->
 <!--                 component-label="'biomaterial'"/>-->
-  <small-label  biomaterial="$ctrl.biomaterial"
+  <small-label ng-show="$ctrl.baseInfo.printStructure.labelSize.value == 'small'" biomaterial="$ctrl.biomaterial"
                 base="$ctrl.baseInfo"
                 component-label="'biomaterial'"/>
 <!--  <bigger-label ng-if="$ctrl.baseInfo.printStructure.labelSize.value == 'bigger'"-->
