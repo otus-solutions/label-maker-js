@@ -1,4 +1,8 @@
 <div>
-  <default-label component-label="'participant'" base="$ctrl.baseInfo"/>
-<!--  <small-label component-label="'participant'" base="$ctrl.baseInfo"/>-->
+  <default-label ng-if="$ctrl.baseInfo.printStructure.labelSize.value == 'default'"
+                 component-label="'participant'" base="$ctrl.baseInfo"/>
+  <small-label ng-if="$ctrl.baseInfo.printStructure.labelSize.value == 'small'"
+               component-label="'participant'" base="$ctrl.baseInfo"/>
+  <bigger-label ng-if="$ctrl.baseInfo.printStructure.labelSize.value == 'bigger'"
+                component-label="'participant'" base="$ctrl.baseInfo"/>
 </div>
