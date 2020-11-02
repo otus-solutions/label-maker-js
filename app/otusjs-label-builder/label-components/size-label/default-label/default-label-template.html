@@ -11,14 +11,14 @@
 <!--biomaterial-->
 <div ng-show="$ctrl.componentLabel == 'biomaterial'" class="default-label">
   <p>{{$ctrl.biomaterial.label}}</p>
-  <div ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+  <div ng-show="$ctrl.baseInfo.printStructure.identified.value" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
     <span>{{$ctrl.baseInfo.participant_name}}</span></br>
   </div>
-  <div layout-align="space-between center" layout="row" flex>
+  <div ng-show="$ctrl.baseInfo.printStructure.identified.value" layout-align="space-between center" layout="row" flex>
     <span>NR:{{$ctrl.baseInfo.recruitment_number}}</span>
     <span>Sexo:{{$ctrl.baseInfo.gender}}</span>
   </div>
-  <div layout-align="space-between center" layout="row" flex>
+  <div ng-show="$ctrl.baseInfo.printStructure.identified.value" layout-align="space-between center" layout="row" flex>
     <span>DN:{{$ctrl.baseInfo.birthday}}    </span>
     <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">Kit: {{$ctrl.baseInfo.laboratoryIdentification}}</span>
   </div>

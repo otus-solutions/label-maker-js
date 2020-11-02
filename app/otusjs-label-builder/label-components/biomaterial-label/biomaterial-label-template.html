@@ -1,12 +1,14 @@
 <div>
-<!--  <default-label biomaterial="$ctrl.biomaterial"-->
-<!--                 base="$ctrl.baseInfo"-->
-<!--                 component-label="'biomaterial'"/>-->
-  <small-label ng-show="$ctrl.baseInfo.printStructure.labelSize.value == 'small'" biomaterial="$ctrl.biomaterial"
+  <default-label ng-show="$ctrl.baseInfo.printStructure.labelSize.value == 'default'"
+                 biomaterial="$ctrl.biomaterial"
+                 base="$ctrl.baseInfo"
+                 component-label="'biomaterial'"/>
+  <small-label ng-show="$ctrl.baseInfo.printStructure.labelSize.value == 'small'"
+               biomaterial="$ctrl.biomaterial"
                 base="$ctrl.baseInfo"
                 component-label="'biomaterial'"/>
-<!--  <bigger-label ng-if="$ctrl.baseInfo.printStructure.labelSize.value == 'bigger'"-->
-<!--                biomaterial="$ctrl.biomaterial"-->
-<!--                base="$ctrl.baseInfo"-->
-<!--                component-label="'biomaterial'"/>-->
+  <bigger-label ng-show="$ctrl.baseInfo.printStructure.labelSize.value == 'bigger'"
+                biomaterial="$ctrl.biomaterial"
+                base="$ctrl.baseInfo"
+                component-label="'biomaterial'"/>
 </div>
