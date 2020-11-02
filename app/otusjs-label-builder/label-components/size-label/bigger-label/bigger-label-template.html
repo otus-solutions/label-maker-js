@@ -8,7 +8,8 @@
   <div ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
     <span>DN: {{$ctrl.baseInfo.birthday}}</span></br>
   </div>
-  <svg id="biomaterial" class="barcode"></svg>
+  <svg ng-if="$ctrl.type == 'barcode'" id="participantbarcode" class="barcode"></svg>
+  <div ng-if="$ctrl.type == 'qrcode'" id="participantqr" class="qrcode"></div>
 </div>
 
 
@@ -22,8 +23,8 @@
   <div ng-show="$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
     <span>NR: {{$ctrl.baseInfo.recruitment_number}}</span></br>
   </div>
-<!--  <svg id="biomaterial" class="barcode"></svg>-->
-  <div id="biomaterialqr" class="qrcode"></div>
+  <svg ng-if="$ctrl.type == 'barcode'" id="biomaterialbarcode" class="barcode"></svg>
+  <div ng-if="$ctrl.type == 'qrcode'" id="biomaterialqr" class="qrcode"></div>
 </div>
 
 <!--unattached-->
@@ -33,6 +34,7 @@
     <span>Centro:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span></br>
     <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
   </div>
-  <svg id="unattached" class="barcode"></svg>
+  <svg ng-if="$ctrl.type == 'barcode'" id="unattachedbarcode" class="barcode"></svg>
+  <div ng-if="$ctrl.type == 'qrcode'" id="unattachedqr" class="qrcode"></div>
 </div>
 
