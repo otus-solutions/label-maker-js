@@ -33,6 +33,7 @@
         };
 
         function renderBarcode() {
+          console.info('here')
           const barcodeContainer = $element.find(`svg`);
           if(self.componentLabel == 'participant') {
             JsBarcode(barcodeContainer[0], self.baseInfo.recruitment_number, BARCODE_DEFAULT_SETTINGS);
