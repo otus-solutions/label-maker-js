@@ -56,16 +56,16 @@
           var qr = qrcode(typeNumber, errorCorrectionLevel);
 
           if(self.componentLabel == 'participant'){
-            addQrIntoElement(qr, "participantqr", self.baseInfo.recruitment_number.toString())
+            addQrIntoElement(qr, "#participantqr", self.baseInfo.recruitment_number.toString())
           }else if(self.componentLabel == 'biomaterial') {
-            addQrIntoElement(qr, "biomaterialqr", self.biomaterial.code)
+            addQrIntoElement(qr, "#biomaterialqr", self.biomaterial.code)
           }else if(self.componentLabel == 'unattached') {
-            addQrIntoElement(qr, 'unattachedqr', self.baseInfo.laboratoryIdentification)
+            addQrIntoElement(qr, '#unattachedqr', self.baseInfo.laboratoryIdentification)
           }
         }
 
         function addQrIntoElement(qr, elementId, datastring){
-          var qrcodeContainer = $element.find(`#${elementId}`)[0]
+          var qrcodeContainer = $element.find(elementId)[0]
           qr.addData(datastring);
           qr.make();
           qrcodeContainer.innerHTML = qr.createSvgTag(1.5)
