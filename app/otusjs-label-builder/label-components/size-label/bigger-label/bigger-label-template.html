@@ -22,7 +22,7 @@
   <div ng-show="$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
     <span>NR: {{$ctrl.baseInfo.recruitment_number}}</span></br>
   </div>
-  <svg id="biomaterial" class="barcode"></svg>
+  <qrcode  data="string" version="2" error-correction-level="Q" size="100" color="#fff" background="#000"></qrcode>
 </div>
 
 <!--unattached-->
