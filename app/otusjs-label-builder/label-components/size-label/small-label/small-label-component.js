@@ -39,13 +39,13 @@
 
         function renderBarcode() {
           if(self.componentLabel == 'participant') {
-            const barcodeContainer = $element.find('#participantbarcode')[0];
+            var barcodeContainer = $element.find('#participantbarcode')[0];
             JsBarcode(barcodeContainer, self.baseInfo.recruitment_number, BARCODE_SETTINGS);
           }else if(self.componentLabel == 'biomaterial') {
-            const barcodeContainer = $element.find('#biomaterialbarcode')[0];
+            var barcodeContainer = $element.find('#biomaterialbarcode')[0];
             JsBarcode(barcodeContainer, self.biomaterial.code, BARCODE_SETTINGS)
           }else if(self.componentLabel == 'unattached') {
-            const barcodeContainer = $element.find('#unattachedbarcode')[0];
+            var barcodeContainer = $element.find('#unattachedbarcode')[0];
             JsBarcode(barcodeContainer, self.baseInfo.laboratoryIdentification, BARCODE_SETTINGS)
           }
         }
@@ -65,7 +65,7 @@
         }
 
         function addQrIntoElement(qr, elementId, datastring){
-          const qrcodeContainer = $element.find(`#${elementId}`)[0]
+          var qrcodeContainer = $element.find(`#${elementId}`)[0]
           qr.addData(datastring);
           qr.make();
           qrcodeContainer.innerHTML = qr.createSvgTag(1.5)
