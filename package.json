@@ -28,7 +28,6 @@
     "angular-bind-html-compile-ci-dev": "1.1.1",
     "angular-material": "1.1.1",
     "angular-messages": "1.5.8",
-    "angular-qrcode": "^7.2.0",
     "angular-resource": "1.5.5",
     "angular-ui-router": "0.3.1",
     "jquery": "2.2.0",
