@@ -1,5 +1,5 @@
 @page {
-  size: 90mm 50mm;
+  size: 90mm 42mm;
   margin: 0mm;
 }
 
@@ -131,8 +131,8 @@
 .bigger-label {
   width: 40mm;
   height: 40mm;
-  margin-top: 5mm;
-  margin-bottom: 5mm !important;
+  margin-top: 1mm;
+  margin-bottom: 3mm !important;
   margin-left: 0.6mm;
   margin-right: 0.6mm;
   position: relative;
