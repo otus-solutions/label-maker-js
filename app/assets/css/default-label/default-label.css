@@ -1,17 +1,16 @@
-/*bigger size*/
-.bigger-label {
-  width: 40mm;
-  height: 40mm;
-  margin: 0.4mm 0.6mm 0.4mm 0.6mm;
+/*default size*/
+.default-label {
+  width: 55mm;
+  height: 23mm;
+  margin: 0.3mm 0.3mm;
   position: relative;
   /* margin: auto; */
-  padding: 2px;
+  padding: 5px 3px 3px 5px;
+  background-color: #fff;
   line-height: 14px;
-  border-radius: 10mm;
-  background: gainsboro;
 }
 
-.bigger-label p {
+.default-label p {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 12px;
   line-height: 15px;
@@ -19,16 +18,16 @@
   letter-spacing: 0.1em;
 }
 
-.bigger-label .label-text {
+.default-label .label-text {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 10px;
   line-height: 15px;
   letter-spacing: 0.1em;
 }
 
-.bigger-label .barcode {
+.default-label .barcode {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   bottom: 0;
   transform: translate(-50%, -5%) !important;

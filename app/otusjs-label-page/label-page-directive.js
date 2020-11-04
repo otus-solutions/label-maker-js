@@ -48,24 +48,34 @@
           _setBiggerLabel();
         }else if(self.printStructure.labelSize.value == 'small') {
           _setSmallLabel();
+        }else if(self.printStructure.labelSize.value == 'default') {
+          _setDefaultLabel();
         }
       }
 
       function _setBiggerLabel() {
         self.baseStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label.min.css"/>'
         self.printStructure.columns == 1 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label-columns-1.min.css"/>' :
-        self.printStructure.columns == 2 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label-columns-2.min.css"/>' :
-        self.printStructure.columns == 3 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label-columns-3.min.css"/>' :
-        self.printStructure.columns == 4 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label-columns-4.min.css"/>' : ""
+          self.printStructure.columns == 2 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label-columns-2.min.css"/>' :
+            self.printStructure.columns == 3 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label-columns-3.min.css"/>' :
+              self.printStructure.columns == 4 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label-columns-4.min.css"/>' : ""
       }
+
       function _setSmallLabel() {
         self.baseStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/small-label.min.css"/>'
         self.printStructure.columns == 1 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/small-label-columns-1.min.css"/>' :
-        self.printStructure.columns == 2 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/small-label-columns-2.min.css"/>' :
-        self.printStructure.columns == 3 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/small-label-columns-3.min.css"/>' :
-        self.printStructure.columns == 4 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/small-label-columns-4.min.css"/>' : ""
+          self.printStructure.columns == 2 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/small-label-columns-2.min.css"/>' :
+            self.printStructure.columns == 3 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/small-label-columns-3.min.css"/>' :
+              self.printStructure.columns == 4 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/small-label-columns-4.min.css"/>' : ""
       }
 
+      function _setDefaultLabel() {
+        self.baseStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/default-label.min.css"/>'
+        self.printStructure.columns == 1 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/default-label-columns-1.min.css"/>' :
+          self.printStructure.columns == 2 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/default-label-columns-2.min.css"/>' :
+            self.printStructure.columns == 3 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/default-label-columns-3.min.css"/>' :
+              self.printStructure.columns == 4 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/default-label-columns-4.min.css"/>' : ""
+      }
 
       $scope.$$postDigest(function() {
         _generateWindow();

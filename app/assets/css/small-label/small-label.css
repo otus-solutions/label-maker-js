@@ -1,8 +1,8 @@
 /*small size*/
 .small-label {
   width: 41.27mm;
-  height: 15.87mm;
-  margin-bottom: 0mm !important;
+  height: 15.77mm;
+  margin: 0.3mm 0.2mm;
   position: relative;
   /* margin: auto; */
   padding: 2px;
