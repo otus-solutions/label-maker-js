@@ -1,7 +1,7 @@
 <div id="print-page" layout-align="start center" ng-if="$ctrl.loadComponents">
   <div>
     <md-grid-list
-      md-cols="$ctrl.printStructure.columns"
+      md-cols="2"
       md-row-height="41mm">
       <md-grid-tile ng-if="$ctrl.laboratoryInfo.laboratoryIdentification == null && $ctrl.baseInfo.printStructure.identified.value">
         <participant-label base="$ctrl.baseInfo" ng-if="$ctrl.laboratoryInfo.laboratoryIdentification == null && $ctrl.baseInfo.printStructure.identified.value"></participant-label>
