@@ -2,7 +2,7 @@
 .default-label {
   width: 55mm;
   height: 23mm;
-  margin-bottom: 3mm;
+  margin-bottom: 2mm !important;
   position: relative;
   /* margin: auto; */
   padding: 5px 3px 3px 5px;
