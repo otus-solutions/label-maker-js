@@ -1,0 +1,44 @@
+/*small size*/
+.small-label {
+  width: 41.27mm;
+  height: 15.87mm;
+  margin-bottom: 3mm !important;
+  position: relative;
+  /* margin: auto; */
+  padding: 2px;
+  line-height: 14px;
+  border-radius: 10mm;
+  background: #fff;
+}
+
+.small-useble-label {
+  width: 25.4mm;
+}
+
+.small-unuseble-label {
+  width: 15.87mm;
+  background: gainsboro;
+}
+
+.small-label p {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+}
+
+.small-label .label-text {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
+
+.small-label .barcode {
+  position: absolute;
+  left: 30%;
+  bottom: 0;
+  transform: translate(-50%, -5%) !important;
+  background-color: white;
+}
