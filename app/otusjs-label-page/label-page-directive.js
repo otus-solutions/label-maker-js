@@ -38,9 +38,24 @@
         self.bioMaterialList = LabelService.getBioMaterialList();
         self.baseInfo = LabelService.getBaseInfo();
         self.laboratoryInfo = LabelService.getLaboratoryInfo();
-
+        self.printStructure = self.baseInfo.printStructure;
+        _verifyLabelSize();
         self.loadComponents = true;
       }
+
+      function _verifyLabelSize() {
+        self.printStructure.labelSize == 'bigger' ? _setBiggerLabel() : "";
+      }
+
+      function _setBiggerLabel() {
+        self.baseStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label.min.css"/>'
+        self.printStructure.columns == 1 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label-columns-1.min.css"/>' :
+        self.printStructure.columns == 2 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label-columns-2.min.css"/>' :
+        self.printStructure.columns == 3 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label-columns-3.min.css"/>' :
+        self.printStructure.columns == 4 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label-columns-4.min.css"/>' : ""
+
+      }
+
 
       $scope.$$postDigest(function() {
         _generateWindow();
@@ -54,7 +69,8 @@
           '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />' +
           `<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css">` +
           '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/otusjs-label-page.min.css"/>' +
-          '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label.min.css"/>' +
+          self.baseStyle +
+          self.printStyle +
           '</head>' +
           '<button class="no-print button-print md-button md-fab md-mini" onclick="window.print()" >' +
           '<i class="material-icons white">print</i>'+
