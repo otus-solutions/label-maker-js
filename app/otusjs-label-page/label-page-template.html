@@ -1,17 +1,13 @@
 <div id="print-page" layout-align="start center" ng-if="$ctrl.loadComponents">
-  <div>
-    <md-grid-list
-      md-cols="2"
-      md-row-height="41mm">
-      <md-grid-tile ng-if="$ctrl.laboratoryInfo.laboratoryIdentification == null && $ctrl.baseInfo.printStructure.identified.value">
-        <participant-label base="$ctrl.baseInfo" ng-if="$ctrl.laboratoryInfo.laboratoryIdentification == null && $ctrl.baseInfo.printStructure.identified.value"></participant-label>
-      </md-grid-tile>
-      <md-grid-tile ng-if="$ctrl.laboratoryInfo.laboratoryIdentification != null">
-        <unattached-label base="$ctrl.laboratoryInfo" ng-if="$ctrl.laboratoryInfo.laboratoryIdentification != null"></unattached-label>
-      </md-grid-tile>
-      <md-grid-tile class="green" ng-repeat="biomaterial in $ctrl.bioMaterialList track by $index">
-        <biomaterial-label base="$ctrl.baseInfo" biomaterial="biomaterial"></biomaterial-label>
-      </md-grid-tile>
-    </md-grid-list>
-  </div>
+  <ul style="display: grid; grid-template-columns: repeat(2, 1fr)">
+    <li ng-if="$ctrl.laboratoryInfo.laboratoryIdentification == null && $ctrl.baseInfo.printStructure.identified.value">
+      <participant-label base="$ctrl.baseInfo" ng-if="$ctrl.laboratoryInfo.laboratoryIdentification == null && $ctrl.baseInfo.printStructure.identified.value"></participant-label>
+    </li>
+    <li ng-if="$ctrl.laboratoryInfo.laboratoryIdentification != null">
+      <unattached-label base="$ctrl.laboratoryInfo" ng-if="$ctrl.laboratoryInfo.laboratoryIdentification != null"></unattached-label>
+    </li>
+    <li class="green" ng-repeat="biomaterial in $ctrl.bioMaterialList track by $index">
+      <biomaterial-label base="$ctrl.baseInfo" biomaterial="biomaterial"></biomaterial-label>
+    </li>
+  </ul>
 </div>

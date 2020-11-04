@@ -44,11 +44,14 @@
       }
 
       function _verifyLabelSize() {
-        self.printStructure.labelSize == 'bigger' ? _setBiggerLabel() : "";
+        if(self.printStructure.labelSize.value == 'bigger'){
+          _setBiggerLabel()
+        }
       }
 
       function _setBiggerLabel() {
         self.baseStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label.min.css"/>'
+        console.info(self.baseStyle)
         self.printStructure.columns == 1 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label-columns-1.min.css"/>' :
         self.printStructure.columns == 2 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label-columns-2.min.css"/>' :
         self.printStructure.columns == 3 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/bigger-label-columns-3.min.css"/>' :
