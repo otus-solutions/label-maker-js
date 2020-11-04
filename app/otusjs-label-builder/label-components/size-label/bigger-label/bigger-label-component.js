@@ -16,12 +16,13 @@
 
       Controller.$inject = [
         '$scope',
+        '$window',
         '$element',
         '$compile',
         'BARCODE_BIGGER_SETTINGS'
       ];
 
-      function Controller($scope, $element, $compile, BARCODE_SETTINGS) {
+      function Controller($scope, $window, $element, $compile, BARCODE_SETTINGS) {
         var self = this;
 
         self.renderBarcode = renderBarcode;
@@ -31,6 +32,9 @@
 
         self.$onInit = function() {
           $compile($element.contents())($scope);
+          const style = "<link rel='stylesheet' type='text/css' href='css/test.min.css'/>"
+          $window.document.head.innerHTML += style
+          console.info($window.document.head)
           if(self.type == 'qrcode') {
             renderQrcode();
           }else if(self.type == 'barcode') {
