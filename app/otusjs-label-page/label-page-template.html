@@ -1,5 +1,5 @@
 <div id="print-page" layout-align="start center" ng-if="$ctrl.loadComponents">
-  <ul style="display: grid; grid-template-columns: repeat(2, 1fr)">
+  <ul ng-class="'label-grid'">
     <li ng-if="$ctrl.laboratoryInfo.laboratoryIdentification == null && $ctrl.baseInfo.printStructure.identified.value">
       <participant-label base="$ctrl.baseInfo" ng-if="$ctrl.laboratoryInfo.laboratoryIdentification == null && $ctrl.baseInfo.printStructure.identified.value"></participant-label>
     </li>

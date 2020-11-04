@@ -2,3 +2,9 @@
   size: 165mm 41mm;
   margin: 0mm;
 }
+
+
+.label-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr)
+}
