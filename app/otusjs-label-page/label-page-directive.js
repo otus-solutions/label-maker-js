@@ -70,11 +70,10 @@
       }
 
       function _setDefaultLabel() {
-        console.info(self.printStructure.type)
         if(self.printStructure.type.value == 'qrcode'){
-          self.baseStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/default-label.min.css"/>'
-        }else {
           self.baseStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/default-label-qr.min.css"/>'
+        }else {
+          self.baseStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/default-label.min.css"/>'
         }
         self.printStructure.columns == 1 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/default-label-columns-1.min.css"/>' :
           self.printStructure.columns == 2 ? self.printStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/default-label-columns-2.min.css"/>' :
