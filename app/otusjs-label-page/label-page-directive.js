@@ -101,7 +101,7 @@
           '<head><title>Etiquetas</title>' +
           '<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet" />' +
           '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />' +
-          `<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css">` +
+          '<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css">' +
           '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/otusjs-label-page.min.css"/>' +
           self.baseStyle +
           self.printStyle +
