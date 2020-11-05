@@ -26,6 +26,7 @@
     self.labelSize = self.baseInfo.printStructure.labelSize.value;
 
     self.$onInit = function() {
+      console.info("bio", self.biomaterial)
       $compile($element.contents())($scope);
     };
   }
