@@ -36,11 +36,21 @@
 
       function _setInfo() {
         self.bioMaterialList = LabelService.getBioMaterialList();
+        self.newList = []
+        self.bioMaterialList.forEach(biomaterial => {
+          fillArray(biomaterial, biomaterial.printStructure.quantity)
+        })
         self.baseInfo = LabelService.getBaseInfo();
         self.laboratoryInfo = LabelService.getLaboratoryInfo();
         self.printStructure = self.baseInfo.printStructure;
         _verifyLabelSize();
         self.loadComponents = true;
+      }
+
+      function fillArray(value, len) {
+        for (var i = 0; i < len; i++) {
+          self.newList.push(value);
+        }
       }
 
       function _verifyLabelSize() {
