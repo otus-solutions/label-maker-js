@@ -31,7 +31,9 @@
 
         self.$onInit = function() {
           $compile($element.contents())($scope);
-          console.info(self.biomaterial)
+          if(self.biomaterial.hasOwnProperty('aliquotCode')){
+            self.biomaterial.code = self.biomaterial.aliquotCode
+          }
           if(self.type == 'qrcode') {
             renderQrcode();
           }else if(self.type == 'barcode') {
