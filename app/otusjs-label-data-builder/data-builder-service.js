@@ -63,6 +63,7 @@
       angular.extend(_unattachedLaboratoryInfo, unattachedLaboratoryInfoModel, data);
       console.info("data",data)
       _bioMaterialList = data.tubes ? data.tubes : data.aliquots ;
+      console.info("biolisst", _bioMaterialList)
     }
 
     function pushInfo(labParticipant) {
