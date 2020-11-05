@@ -70,6 +70,7 @@
       }
 
       function _setDefaultLabel() {
+        console.info(self.printStructure.type)
         if(self.printStructure.type.value == 'qrcode'){
           self.baseStyle = '<link rel="stylesheet" type="text/css" href="node_modules/label-maker-js/dist/label-maker-js/css/default-label.min.css"/>'
         }else {
