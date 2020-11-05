@@ -35,7 +35,7 @@
 
     function generateLabelPage() {
       var scope = $rootScope.$new();
-      scope.labelData = self.labelData
+      scope.labelData = self.labelData;
       var labelPage = $compile(LABEL_PAGE)(scope);
     }
 
