@@ -1,8 +1,8 @@
 /*default size*/
 .default-label {
   width: 55mm;
-  height: 23mm;
-  margin-bottom: 2mm !important;
+  height: 25mm;
+  margin: 4mm 0;
   position: relative;
   /* margin: auto; */
   padding: 5px 3px 3px 5px;
@@ -27,7 +27,7 @@
 
 .default-label .barcode {
   position: absolute;
-  top: 70%;
+  top: 65%;
   left: 50%;
   bottom: 0;
   transform: translate(-50%, -5%) !important;
