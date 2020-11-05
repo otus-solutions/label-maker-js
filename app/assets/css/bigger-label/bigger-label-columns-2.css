@@ -1,0 +1,10 @@
+@page {
+  size: 83mm 41mm;
+  margin: 0mm;
+}
+
+
+.label-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr)
+}

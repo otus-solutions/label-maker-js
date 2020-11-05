@@ -15,7 +15,7 @@
 
     _init();
     /* Public Interface */
-    self.getTubesList = getTubesList;
+    self.getBioMaterialList = getBioMaterialList;
     self.getBaseInfo = getBaseInfo;
     self.getLaboratoryInfo = getLaboratoryInfo;
     self.pushInfo = pushInfo;
@@ -36,8 +36,8 @@
       return DataBuilderService.getBaseInfo();
    }
 
-    function getTubesList($scope) {
-      return DataBuilderService.getTubesList();
+    function getBioMaterialList($scope) {
+      return DataBuilderService.getBioMaterialList();
     }
 
   }

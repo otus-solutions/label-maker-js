@@ -1,0 +1,27 @@
+<!--participant-->
+<div ng-show="$ctrl.componentLabel == 'participant'" layout="row" class="small-label">
+  <div class="small-useble-label">
+    <svg ng-show="$ctrl.type == 'barcode'" id="participantbarcode" class="barcode"></svg>
+    <div ng-show="$ctrl.type == 'qrcode'" id="participantqr" class="qrcode"></div>
+  </div>
+  <div class="small-unuseble-label"></div>
+</div>
+
+<!--biomaterial-->
+<div ng-show="$ctrl.componentLabel == 'biomaterial'" layout="row" class="small-label">
+  <div class="small-useble-label">
+    <svg ng-show="$ctrl.type == 'barcode'" id="biomaterialbarcode" class="barcode"></svg>
+    <div ng-show="$ctrl.type == 'qrcode'" id="biomaterialqr" class="qrcode"></div>
+  </div>
+  <div class="small-unuseble-label"></div>
+</div>
+
+<!--unattached-->
+<div ng-show="$ctrl.componentLabel == 'unattached'" layout="row" class="small-label">
+  <div class="small-useble-label">
+    <svg ng-show="$ctrl.type == 'barcode'" id="unattachedbarcode" class="barcode"></svg>
+    <div ng-show="$ctrl.type == 'qrcode'" id="unattachedqr" class="qrcode"></div>
+  </div>
+  <div class="small-unuseble-label"></div>
+</div>
+

@@ -1,7 +1,13 @@
-<div class="label">
-   <div class="label-text">
-       <h3>{{$ctrl.BaseInfo.participant_name}}</h3>
-       <span>CQ:{{$ctrl.BaseInfo.cq_group}}</span></br>
-   </div>
-   <svg id="{{$ctrl.BaseInfo.recruitment_number}}" class="barcode"></svg>
+<div>
+  <div ng-if="$ctrl.labelSize == 'default'">
+    <default-label component-label="'participant'" base="$ctrl.baseInfo"/>
+  </div>
+  <div ng-if="$ctrl.labelSize == 'small'">
+  <small-label ng-show="$ctrl.baseInfo.printStructure.labelSize.value == 'small'"
+               component-label="'participant'" base="$ctrl.baseInfo"/>
+  </div>
+  <div ng-if="$ctrl.labelSize == 'bigger'">
+    <bigger-label ng-show="$ctrl.baseInfo.printStructure.labelSize.value == 'bigger'"
+                  component-label="'participant'" base="$ctrl.baseInfo"/>
+  </div>
 </div>
