@@ -24,6 +24,7 @@
     function Controller($element, $scope) {
       var self = this;
       self.printPage = self.printPage;
+      self.newbiomaterialList = []
 
       init();
 
@@ -36,7 +37,6 @@
 
       function _setInfo() {
         self.bioMaterialList = LabelService.getBioMaterialList();
-        self.newList = []
         self.bioMaterialList.forEach(biomaterial => {
           fillArray(biomaterial, biomaterial.printStructure.quantity)
         })
@@ -49,7 +49,7 @@
 
       function fillArray(value, len) {
         for (var i = 0; i < len; i++) {
-          self.newList.push(value);
+          self.newbiomaterialList.push(value);
         }
       }
 
