@@ -40,7 +40,6 @@
         self.bioMaterialList.forEach(biomaterial => {
           fillArray(biomaterial, biomaterial.printStructure.quantity)
         })
-        console.info("self.biolist", self.bioMaterialList)
         self.baseInfo = LabelService.getBaseInfo();
         self.laboratoryInfo = LabelService.getLaboratoryInfo();
         self.printStructure = self.baseInfo.printStructure;
