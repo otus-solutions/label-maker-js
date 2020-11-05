@@ -4,6 +4,10 @@
   /*visibility: hidden;*/
 }
 
+li {
+  list-style: none;
+}
+
 #print-page {
   font-family: monospace;
   margin: auto;
