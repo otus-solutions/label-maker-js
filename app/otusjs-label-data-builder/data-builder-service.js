@@ -61,6 +61,7 @@
     function _setInfo(data) {
       angular.extend(_baseInfo, baseInfoModel, data);
       angular.extend(_unattachedLaboratoryInfo, unattachedLaboratoryInfoModel, data);
+      console.info("data",data)
       _bioMaterialList = data.tubes ? data.tubes : data.aliquots ;
     }
 
