@@ -30,7 +30,7 @@
 
         self.$onInit = function() {
           $compile($element.contents())($scope);
-          if(self.biomaterial.hasOwnProperty('aliquotCode')){
+          if(self.biomaterial && self.biomaterial.hasOwnProperty('aliquotCode')){
             self.biomaterial.code = self.biomaterial.aliquotCode
           }
           if(self.type == 'qrcode') {
