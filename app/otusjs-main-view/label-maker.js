@@ -19,7 +19,7 @@
     'otusjs.labelMaker.labelBuilder.LabelService'
   ];
 
-  function Controller($scope, $rootScope, $compile, $element, LabelService) {
+  function Controller($scope, $rootScope, $compile) {
     var self = this;
     var LABEL_PAGE = '<label-page/>';
 
@@ -35,7 +35,50 @@
 
     function generateLabelPage() {
       var scope = $rootScope.$new();
-      scope.labelData = self.labelData;
+      scope.labelData = {
+        birthday: "9/7/2020",
+        cq_group: "Nenhum",
+        gender: "M",
+        participant_name: "Adriano",
+        printStructure: {
+          columns: 1,
+          identified: {value: true, name: "Sim"},
+          labelSize: {value: "small", name: "Pequena"},
+          type: {value: "qrcode", name: "Qrcode"}
+        },
+        recruitment_number: 1074830,
+        tubes: [
+          {
+            aliquots: [],
+            availableAliquots: [],
+            code: "361122646",
+            groupName: "Default",
+            label: "Gel Jejum",
+            momentLabel: "Jejum",
+            objectType: "Tube",
+            printStructure: {
+              quantity: 4,
+              selected: true
+            },
+            type: "Gel",
+            typeLabel: "Gel"
+          }, {
+            aliquots: [],
+            availableAliquots: [],
+            code: "361122646",
+            groupName: "Default",
+            label: "Gel Jejum",
+            momentLabel: "Jejum",
+            objectType: "Tube",
+            printStructure: {
+              quantity: 4,
+              selected: true
+            },
+            type: "Gel",
+            typeLabel: "Gel"
+          }
+        ]
+      }
       var labelPage = $compile(LABEL_PAGE)(scope);
     }
 

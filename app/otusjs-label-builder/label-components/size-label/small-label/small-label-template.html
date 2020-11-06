@@ -1,8 +1,16 @@
 <!--participant-->
 <div ng-show="$ctrl.componentLabel == 'participant'" layout="row" class="small-label">
   <div class="small-useble-label">
-    <svg ng-show="$ctrl.type == 'barcode'" id="participantbarcode" class="barcode"></svg>
-    <div ng-show="$ctrl.type == 'qrcode'" id="participantqr" class="qrcode"></div>
+    <div class="label-text">
+      <p>{{$ctrl.baseInfo.participant_name}}</p>
+    </div>
+    <div layout="row">
+      <svg ng-show="$ctrl.type == 'barcode'" id="participantbarcode" class="barcode"></svg>
+      <div ng-show="$ctrl.type == 'qrcode'" id="participantqr" class="qrcode"></div>
+      <div class="label-vertical-text">
+        <p>NR:{{$ctrl.baseInfo.recruitment_number}}</p>
+      </div>
+    </div>
   </div>
   <div class="small-unuseble-label"></div>
 </div>
@@ -12,6 +20,7 @@
   <div class="small-useble-label">
     <svg ng-show="$ctrl.type == 'barcode'" id="biomaterialbarcode" class="barcode"></svg>
     <div ng-show="$ctrl.type == 'qrcode'" id="biomaterialqr" class="qrcode"></div>
+
   </div>
   <div class="small-unuseble-label"></div>
 </div>
