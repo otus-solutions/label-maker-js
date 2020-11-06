@@ -24,8 +24,8 @@
   letter-spacing: 0.5px;
 }
 
-.label-grid li:nth-child(even) {
-  margin-left: 5mm;
+li:nth-child(even) {
+  margin-left: 10mm;
 }
 
 .bigger-label .barcode {
