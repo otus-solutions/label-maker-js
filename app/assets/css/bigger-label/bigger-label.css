@@ -24,6 +24,10 @@
   letter-spacing: 0.5px;
 }
 
+.label-grid li:nth-child(even) {
+
+}
+
 .bigger-label .barcode {
   position: absolute;
   top: 50%;
