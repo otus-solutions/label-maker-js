@@ -6,7 +6,6 @@
   position: relative;
   /* margin: auto; */
   padding: 2px;
-  line-height: 14px;
   border-radius: 10mm;
   background: #fff;
 }
@@ -28,9 +27,16 @@
   font-family: Verdana, Geneva, sans-serif;
   font-size: 8px;
   font-weight: bolder;
+  letter-spacing: 0.5px;
   transform: rotate(90deg);
   position: relative;
   right: 5px;
+  top: 3px;
+}
+
+.small-label #participantqr {
+  position: relative;
+  left: 5px;
 }
 
 .small-label .barcode {
