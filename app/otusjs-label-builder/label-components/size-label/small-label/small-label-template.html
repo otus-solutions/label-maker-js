@@ -19,18 +19,17 @@
 <!--biomaterial-->
 <div ng-show="$ctrl.componentLabel == 'biomaterial'" layout="row" class="small-label">
   <div class="small-useble-label">
-    <div class="label-text">
-      <p>{{$ctrl.biomaterial.label}}</p>
-    </div>
     <div layout="row">
       <svg ng-show="$ctrl.type == 'barcode'" id="biomaterialbarcode" class="barcode"></svg>
       <div ng-show="$ctrl.type == 'qrcode'" id="biomaterialqr" class="qrcode"></div>
       <div class="label-vertical-text">
-<!--        <p>{{$ctrl.biomaterial.label}}</p>-->
+        <p>{{$ctrl.biomaterial.label}}</p>
         <p>{{$ctrl.biomaterial.code}}</p>
         <p>KIT:{{$ctrl.biomaterial.code}}</p>
-        <p>P:{{$ctrl.baseInfo.participant_name}}</p>
-        <p>NR:{{$ctrl.baseInfo.recruitment_number}}</p>
+        <p ng-show="$ctrl.identified">P:{{$ctrl.baseInfo.participant_name}}</p>
+        <p ng-show="!$ctrl.identified">P:________________</p>
+        <p ng-show="$ctrl.identified">NR:{{$ctrl.baseInfo.recruitment_number}}</p>
+        <p ng-show="!$ctrl.identified">NR:_______________</p>
       </div>
     </div>
   </div>
@@ -40,8 +39,17 @@
 <!--unattached-->
 <div ng-show="$ctrl.componentLabel == 'unattached'" layout="row" class="small-label">
   <div class="small-useble-label">
-    <svg ng-show="$ctrl.type == 'barcode'" id="unattachedbarcode" class="barcode"></svg>
-    <div ng-show="$ctrl.type == 'qrcode'" id="unattachedqr" class="qrcode"></div>
+    <div layout="row">
+      <svg ng-show="$ctrl.type == 'barcode'" id="unattachedbarcode" class="barcode"></svg>
+      <div ng-show="$ctrl.type == 'qrcode'" id="unattachedqr" class="qrcode"></div>
+      <div class="label-vertical-text">
+        <p>Laboratório</p>
+        <p>Centro:{{$ctrl.baseInfo.laboratoryFieldCenter}}</p>
+        <p>CQ:{{$ctrl.baseInfo.cq_group}}</p>
+        <p>P:{{baseInfo.laboratoryIdentification}}</p>
+        <p></p>
+      </div>
+    </div>
   </div>
   <div class="small-unuseble-label"></div>
 </div>

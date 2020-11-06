@@ -34,7 +34,7 @@
   top: 3px;
 }
 
-.small-label #participantqr {
+.small-label .qrcode {
   position: relative;
   left: 5px;
 }
