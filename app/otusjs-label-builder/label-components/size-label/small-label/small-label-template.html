@@ -8,6 +8,8 @@
         <p>{{$ctrl.baseInfo.participant_name}}</p>
         <p>NR:{{$ctrl.baseInfo.recruitment_number}}</p>
         <p>KIT:{{$ctrl.baseInfo.recruitment_number}}</p>
+        <p>SEXO:{{$ctrl.baseInfo.gender}}</p>
+        <p>DN:{{$ctrl.baseInfo.birthday}}</p>
       </div>
     </div>
   </div>
@@ -17,9 +19,20 @@
 <!--biomaterial-->
 <div ng-show="$ctrl.componentLabel == 'biomaterial'" layout="row" class="small-label">
   <div class="small-useble-label">
-    <svg ng-show="$ctrl.type == 'barcode'" id="biomaterialbarcode" class="barcode"></svg>
-    <div ng-show="$ctrl.type == 'qrcode'" id="biomaterialqr" class="qrcode"></div>
-
+    <div class="label-text">
+      <p>{{$ctrl.biomaterial.label}}</p>
+    </div>
+    <div layout="row">
+      <svg ng-show="$ctrl.type == 'barcode'" id="biomaterialbarcode" class="barcode"></svg>
+      <div ng-show="$ctrl.type == 'qrcode'" id="biomaterialqr" class="qrcode"></div>
+      <div class="label-vertical-text">
+<!--        <p>{{$ctrl.biomaterial.label}}</p>-->
+        <p>{{$ctrl.biomaterial.code}}</p>
+        <p>KIT:{{$ctrl.biomaterial.code}}</p>
+        <p>P:{{$ctrl.baseInfo.participant_name}}</p>
+        <p>NR:{{$ctrl.baseInfo.recruitment_number}}</p>
+      </div>
+    </div>
   </div>
   <div class="small-unuseble-label"></div>
 </div>
