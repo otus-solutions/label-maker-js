@@ -7,7 +7,8 @@
       templateUrl: 'app/otusjs-main-view/main-view-template.html',
       controller: Controller,
       bindings: {
-        labelData: '<'
+        labelData: '<',
+        buttonName: '<'
       }
     });
 
