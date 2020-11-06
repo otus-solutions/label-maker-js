@@ -28,8 +28,9 @@
   font-family: Verdana, Geneva, sans-serif;
   font-size: 8px;
   font-weight: bolder;
-  letter-spacing: 0.1em;
   transform: rotate(90deg);
+  position: relative;
+  right: 5px;
 }
 
 .small-label .barcode {
