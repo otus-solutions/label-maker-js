@@ -25,7 +25,7 @@
 }
 
 .label-grid li:nth-child(even) {
-
+  margin-left: 5mm;
 }
 
 .bigger-label .barcode {
