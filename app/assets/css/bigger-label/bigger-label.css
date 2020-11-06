@@ -21,9 +21,8 @@
 
 .bigger-label .label-text {
   font-family: Verdana, Geneva, sans-serif;
-  font-size: 10px;
-  line-height: 15px;
-  letter-spacing: 0.1em;
+  font-size: 9px;
+  letter-spacing: 0.5px;
 }
 
 .bigger-label .barcode {

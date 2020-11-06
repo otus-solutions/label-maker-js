@@ -27,9 +27,9 @@
         <p>{{$ctrl.biomaterial.code}}</p>
         <p>KIT:{{$ctrl.biomaterial.code}}</p>
         <p ng-show="$ctrl.identified">P:{{$ctrl.baseInfo.participant_name}}</p>
-        <p ng-show="!$ctrl.identified">P:________________</p>
+        <p ng-show="!$ctrl.identified">P:_________</p>
         <p ng-show="$ctrl.identified">NR:{{$ctrl.baseInfo.recruitment_number}}</p>
-        <p ng-show="!$ctrl.identified">NR:_______________</p>
+        <p ng-show="!$ctrl.identified">NR:________</p>
       </div>
     </div>
   </div>
@@ -47,7 +47,7 @@
         <p>Centro:{{$ctrl.baseInfo.laboratoryFieldCenter}}</p>
         <p>CQ:{{$ctrl.baseInfo.cq_group}}</p>
         <p>P:{{baseInfo.laboratoryIdentification}}</p>
-        <p></p>
+        <p>_________</p>
       </div>
     </div>
   </div>
