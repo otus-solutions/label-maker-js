@@ -5,8 +5,13 @@
     <h3>{{$ctrl.baseInfo.participant_name}}</h3>
     <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
   </div>
-  <div ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-    <span>{{$ctrl.baseInfo.recruitment_number}}</span></br>
+  <div layout-align="space-between center" layout="row" flex>
+    <span>NR:{{$ctrl.baseInfo.recruitment_number}}</span>
+    <span>Sexo:{{$ctrl.baseInfo.gender}}</span>
+  </div>
+  <div layout-align="space-between center" layout="row" flex>
+    <span>DN:{{$ctrl.baseInfo.birthday}}</span>
+    <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">Kit: {{$ctrl.baseInfo.laboratoryIdentification}}</span>
   </div>
   <svg id="participantbarcode" class="barcode"></svg>
 </div>
@@ -15,11 +20,17 @@
 <div ng-show="$ctrl.componentLabel == 'participant' && $ctrl.type == 'qrcode'"
      layout="row" layout-align="space-between center"
      class="default-label">
-  <div>
-    <div class="default-label-text">
-      <h3>{{$ctrl.baseInfo.participant_name}}</h3>
-      <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
-    </div>
+  <p>{{$ctrl.baseInfo.participant_name}}</p>
+  <div class="default-label-text">
+    <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
+  </div>
+  <div layout-align="space-between center" layout="row" flex>
+    <span>NR:{{$ctrl.baseInfo.recruitment_number}}</span>
+    <span>Sexo:{{$ctrl.baseInfo.gender}}</span>
+  </div>
+  <div layout-align="space-between center" layout="row" flex>
+    <span>DN:{{$ctrl.baseInfo.birthday}}</span>
+    <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">Kit: {{$ctrl.baseInfo.laboratoryIdentification}}</span>
   </div>
   <div>
     <div id="participantqr" class="qrcode"></div>
