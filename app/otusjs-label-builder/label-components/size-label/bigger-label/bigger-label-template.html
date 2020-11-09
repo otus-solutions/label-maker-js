@@ -1,6 +1,6 @@
 <!--participant-->
 <div ng-show="$ctrl.componentLabel == 'participant'"
-     layout="column" layout-align="start center" class="bigger-label">
+     layout="column" layout-align="start center" class="bigger-label" xmlns="http://www.w3.org/1999/html">
   <p>{{$ctrl.baseInfo.participant_name}}</p>
   <div class="label-text" layout-align="space-between center" layout="row" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
     <span>{{$ctrl.baseInfo.recruitment_number}}</span></br>
@@ -25,9 +25,11 @@
   <div layout-align="start start">
     <div class="label-text" ng-show="$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>PART.:{{$ctrl.baseInfo.participant_name}}</span></br>
+      <span>SEXO: {{$ctrl.baseInfo.gender}}</span></br>
     </div>
-    <div class="label-text" ng-show="!$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-      <span>PART.:__________</span></br>
+    <div class="label-text" ng-show="!$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+      <span>PART.:_______</span></br>
+      <span>SEXO:__</span></br>
     </div>
     <div class="label-text" ng-show="$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>RN:{{$ctrl.baseInfo.recruitment_number}}</span></br>
