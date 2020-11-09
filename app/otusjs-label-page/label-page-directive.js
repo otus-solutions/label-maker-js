@@ -37,9 +37,11 @@
 
       function _setInfo() {
         self.bioMaterialList = LabelService.getBioMaterialList();
-        self.bioMaterialList.forEach(function (biomaterial) {
-          fillArray(biomaterial, biomaterial.printStructure.quantity)
-        })
+        if(self.bioMaterialList){
+          self.bioMaterialList.forEach(function (biomaterial) {
+            fillArray(biomaterial, biomaterial.printStructure.quantity)
+          })
+        }
         self.baseInfo = LabelService.getBaseInfo();
         self.laboratoryInfo = LabelService.getLaboratoryInfo();
         self.printStructure = self.baseInfo.printStructure;

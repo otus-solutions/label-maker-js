@@ -6,7 +6,6 @@
   position: relative;
   /* margin: auto; */
   padding: 2px;
-  line-height: 14px;
   border-radius: 10mm;
   background: #fff;
 }
@@ -20,19 +19,25 @@
   background: gainsboro;
 }
 
-.small-label p {
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: bolder;
-  letter-spacing: 0.1em;
+.small-label .label-text {
+  font-size: 7px;
 }
 
-.small-label .label-text {
+.small-label .label-vertical-text {
   font-family: Verdana, Geneva, sans-serif;
-  font-size: 10px;
-  line-height: 15px;
-  letter-spacing: 0.1em;
+  font-size: 8px;
+  font-weight: bolder;
+  letter-spacing: 0.5px;
+  width: 55.771px;
+  height: 49.500px;
+  transform: rotate(90deg);
+  position: relative;
+  right: 5px;
+}
+
+.small-label .qrcode {
+  position: relative;
+  left: 5px;
 }
 
 .small-label .barcode {

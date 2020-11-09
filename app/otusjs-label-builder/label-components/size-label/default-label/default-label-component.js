@@ -27,7 +27,7 @@
         self.renderBarcode = renderBarcode;
         self.baseInfo = angular.copy(self.base);
         self.identified = self.baseInfo.printStructure.identified.value;
-        self.type = self.baseInfo.printStructure.type.value;
+        self.type = self.baseInfo.printStructure.type.value
 
         self.$onInit = function() {
           $compile($element.contents())($scope);

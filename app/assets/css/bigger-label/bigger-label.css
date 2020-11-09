@@ -6,7 +6,6 @@
   position: relative;
   /* margin: auto; */
   padding: 2px;
-  line-height: 14px;
   border-radius: 10mm;
   background: gainsboro;
 }
@@ -21,9 +20,8 @@
 
 .bigger-label .label-text {
   font-family: Verdana, Geneva, sans-serif;
-  font-size: 10px;
-  line-height: 15px;
-  letter-spacing: 0.1em;
+  font-size: 11px;
+  letter-spacing: 0.5px;
 }
 
 .bigger-label .barcode {
