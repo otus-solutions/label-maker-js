@@ -41,7 +41,7 @@
 <div ng-show="$ctrl.componentLabel == 'unattached'" layout="row" class="small-label">
   <div class="small-useble-label">
     <div layout="row">
-      <p style="font-size: 0.8px" ng-show="$ctrl.type =='barcode'">{{$ctrl.baseInfo.laboratoryFieldCenter}}</p>
+      <p ng-show="$ctrl.type =='barcode'">{{$ctrl.baseInfo.laboratoryFieldCenter}}</p>
       <svg ng-show="$ctrl.type == 'barcode'" id="unattachedbarcode" class="barcode"></svg>
       <div ng-show="$ctrl.type == 'qrcode'" id="unattachedqr" class="qrcode"></div>
       <div ng-show="$ctrl.type == 'qrcode'" class="label-vertical-text">
