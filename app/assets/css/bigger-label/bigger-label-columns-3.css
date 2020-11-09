@@ -8,3 +8,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr)
 }
+
+li:nth-child(even) {
+  margin-left: 10mm;
+}

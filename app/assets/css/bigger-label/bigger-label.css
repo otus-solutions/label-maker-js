@@ -24,9 +24,6 @@
   letter-spacing: 0.5px;
 }
 
-li:nth-child(even) {
-  margin-left: 10mm;
-}
 
 .bigger-label .barcode {
   position: absolute;
