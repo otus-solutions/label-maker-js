@@ -21,11 +21,11 @@
   <p>
     {{$ctrl.biomaterial.label}}
   </p>
-  <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+  <div class="label-text">
     <span>{{$ctrl.biomaterial.code}}</span></br>
   </div>
   <div layout-align="start start">
-    <div class="label-text" ng-show="$ctrl.identified" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+    <div class="label-text" ng-show="$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>Part.:{{$ctrl.baseInfo.participant_name}}</span></br>
       <span>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span></br>
     </div>
