@@ -19,7 +19,7 @@
 <!--biomaterial-->
 <div ng-show="$ctrl.componentLabel == 'biomaterial'" layout="row" class="small-label">
   <div class="small-useble-label">
-    <p ng-show="$ctrl.type =='barcode' && $ctrl.identified">{{$ctrl.baseInfo.participant_name}}</p>
+    <p style="font-size: 0.8px" ng-show="$ctrl.type =='barcode' && $ctrl.identified">{{$ctrl.baseInfo.participant_name}}</p>
     <p ng-show="$ctrl.type =='barcode' && !$ctrl.identified">Part.:_______</p>
     <div layout="row">
       <svg ng-show="$ctrl.type == 'barcode'" id="biomaterialbarcode" class="barcode"></svg>
@@ -40,9 +40,10 @@
 <div ng-show="$ctrl.componentLabel == 'unattached'" layout="row" class="small-label">
   <div class="small-useble-label">
     <div layout="row">
+      <p ng-show="$ctrl.type =='barcode'">{{$ctrl.baseInfo.participant_name}}</p>
       <svg ng-show="$ctrl.type == 'barcode'" id="unattachedbarcode" class="barcode"></svg>
       <div ng-show="$ctrl.type == 'qrcode'" id="unattachedqr" class="qrcode"></div>
-      <div class="label-vertical-text">
+      <div ng-show="$ctrl.type == 'qrcode'" class="label-vertical-text">
         <p>Laboratório</p>
         <p>Centro:{{$ctrl.baseInfo.laboratoryFieldCenter}}</p>
         <p>CQ:{{$ctrl.baseInfo.cq_group}}</p>

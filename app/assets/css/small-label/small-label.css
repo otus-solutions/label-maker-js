@@ -43,7 +43,6 @@
 .small-label .barcode {
   position: absolute;
   left: 30%;
-  bottom: 0;
   transform: translate(-50%, -5%) !important;
   background-color: white;
 }
