@@ -47,18 +47,16 @@
 </div>
 
 <!--unattached-->
-<div ng-show="$ctrl.componentLabel == 'unattached'" class="bigger-label">
-  <div class="bigger-label-text">
-    <p>Laboratório</p>
-    <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-      <span>Centro:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span></br>
-    </div>
-    <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-      <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
-    </div>
-    <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-      <span>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span></br>
-    </div>
+<div ng-show="$ctrl.componentLabel == 'unattached'" layout="column" layout-align="start center" class="bigger-label">
+  <p>Laboratório</p>
+  <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+    <span>Centro:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span></br>
+  </div>
+  <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+    <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
+  </div>
+  <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+    <span>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span></br>
   </div>
   <svg ng-show="$ctrl.type == 'barcode'" id="unattachedbarcode" class="barcode"></svg>
   <div ng-show="$ctrl.type == 'qrcode'" id="unattachedqr" class="qrcode"></div>
