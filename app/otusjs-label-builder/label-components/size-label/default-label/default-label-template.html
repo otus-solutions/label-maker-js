@@ -53,6 +53,8 @@
   </div>
   <div ng-show="$ctrl.identified" layout-align="space-between center" layout="row" flex>
     <span>DN:{{$ctrl.baseInfo.birthday}}    </span>
+  </div>
+  <div flex>
     <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">Kit: {{$ctrl.baseInfo.laboratoryIdentification}}</span>
   </div>
   <svg id="biomaterialbarcode" class="barcode"></svg>
@@ -73,6 +75,8 @@
     </div>
     <div ng-show="$ctrl.identified" layout-align="space-between center" layout="row" flex>
       <span>DN:{{$ctrl.baseInfo.birthday}}    </span>
+    </div>
+    <div flex>
       <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">Kit: {{$ctrl.baseInfo.laboratoryIdentification}}</span>
     </div>
   </div>
@@ -88,6 +92,7 @@
     <p>Laboratório</p>
     <span>Centro:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span></br>
     <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
+    <span>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span></br>
   </div>
   <svg ng-show="$ctrl.type == 'barcode'" id="unattachedbarcode" class="barcode"></svg>
 </div>
@@ -102,6 +107,7 @@
     <div>
       <span>Centro:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span></br>
       <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
+      <span>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span></br>
     </div>
   </div>
   <div>

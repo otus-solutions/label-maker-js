@@ -42,6 +42,9 @@
   <div class="label-text" ng-show="!$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
     <span>DN:_______ SEXO: __</span></br>
   </div>
+  <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+    <span>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span></br>
+  </div>
   <svg ng-show="$ctrl.type == 'barcode'" id="biomaterialbarcode" class="barcode"></svg>
   <div ng-show="$ctrl.type == 'qrcode'" id="biomaterialqr" class="qrcode"></div>
 </div>
