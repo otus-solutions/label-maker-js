@@ -49,16 +49,25 @@
 <!--biomaterial-->
 <div ng-show="$ctrl.componentLabel == 'biomaterial' && $ctrl.type == 'barcode'" class="default-label">
   <p>{{$ctrl.biomaterial.label}}</p>
-  <div ng-show="$ctrl.identified" layout-align="space-between center">
+  <div ng-show="$ctrl.identified"  layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
     <span>{{$ctrl.baseInfo.participant_name}}</span></br>
     <span>Sexo:{{$ctrl.baseInfo.gender}}</span>
+  </div>
+  <div ng-show="!$ctrl.identified"  layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+    <span>Part:_______</span></br>
+    <span>Sexo:__</span>
   </div>
   <div ng-show="$ctrl.identified" layout-align="space-between center" layout="row" flex>
     <span>NR:{{$ctrl.baseInfo.recruitment_number}}</span>
   </div>
+  <div ng-show="!$ctrl.identified" layout-align="space-between center" layout="row" flex>
+    <span>NR:_______</span>
+  </div>
   <div ng-show="$ctrl.identified" layout-align="space-between center" layout="row" flex>
     <span>DN:{{$ctrl.baseInfo.birthday}}</span>
-    <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">Kit: {{$ctrl.baseInfo.laboratoryIdentification}}</span>
+  </div>
+  <div ng-show="!$ctrl.identified" layout-align="space-between center" layout="row" flex>
+    <span>DN:{{$ctrl.baseInfo.birthday}}</span>
   </div>
   <svg id="biomaterialbarcode" class="barcode"></svg>
 </div>
@@ -73,11 +82,21 @@
       <span>{{$ctrl.baseInfo.participant_name}}</span></br>
       <span>Sexo:{{$ctrl.baseInfo.gender}}</span>
     </div>
+    <div ng-show="!$ctrl.identified"  layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+      <span>Part:_______</span></br>
+      <span>Sexo:__</span>
+    </div>
     <div ng-show="$ctrl.identified" layout-align="space-between center" layout="row" flex>
       <span>NR:{{$ctrl.baseInfo.recruitment_number}}</span>
     </div>
+    <div ng-show="!$ctrl.identified" layout-align="space-between center" layout="row" flex>
+      <span>NR:_______</span>
+    </div>
     <div ng-show="$ctrl.identified" layout-align="space-between center" layout="row" flex>
       <span>DN:{{$ctrl.baseInfo.birthday}}</span>
+    </div>
+    <div ng-show="!$ctrl.identified" layout-align="space-between center" layout="row" flex>
+      <span>DN:______</span>
     </div>
     <div flex>
       <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">Kit: {{$ctrl.baseInfo.laboratoryIdentification}}</span>
