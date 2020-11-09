@@ -7,7 +7,7 @@
       <div class="label-vertical-text">
         <p>{{$ctrl.baseInfo.participant_name}}</p>
         <p>NR:{{$ctrl.baseInfo.recruitment_number}}</p>
-        <p>KIT:{{$ctrl.baseInfo.recruitment_number}}</p>
+        <p>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</p>
         <p>SEXO:{{$ctrl.baseInfo.gender}}</p>
         <p>DN:{{$ctrl.baseInfo.birthday}}</p>
       </div>
@@ -25,7 +25,7 @@
       <div class="label-vertical-text">
         <p>{{$ctrl.biomaterial.label}}</p>
         <p>{{$ctrl.biomaterial.code}}</p>
-        <p>KIT:{{$ctrl.biomaterial.code}}</p>
+        <p>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</p>
         <p ng-show="$ctrl.identified">P:{{$ctrl.baseInfo.participant_name}}</p>
         <p ng-show="!$ctrl.identified">P:_________</p>
         <p ng-show="$ctrl.identified">NR:{{$ctrl.baseInfo.recruitment_number}}</p>

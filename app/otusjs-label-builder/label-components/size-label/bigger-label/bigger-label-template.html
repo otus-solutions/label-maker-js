@@ -9,7 +9,7 @@
     <span>DN: {{$ctrl.baseInfo.birthday}} SEXO: {{$ctrl.baseInfo.gender}}</span></br>
   </div>
   <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-    <span>KIT: {{$ctrl.baseInfo.recruitment_number}}</span></br>
+    <span>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span></br>
   </div>
   <svg ng-show="$ctrl.type == 'barcode'" id="participantbarcode" class="barcode"></svg>
   <div ng-show="$ctrl.type == 'qrcode'" id="participantqr" class="qrcode"></div>
@@ -25,8 +25,9 @@
     <span>{{$ctrl.biomaterial.code}}</span></br>
   </div>
   <div layout-align="start start">
-    <div class="label-text" ng-show="$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+    <div class="label-text" ng-show="$ctrl.identified" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>Part.:{{$ctrl.baseInfo.participant_name}}</span></br>
+      <span>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span></br>
     </div>
     <div class="label-text" ng-show="!$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>Part.:__________</span></br>
@@ -45,7 +46,6 @@
     </div>
   </div>
   <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-    <span>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span></br>
   </div>
   <svg ng-show="$ctrl.type == 'barcode'" id="biomaterialbarcode" class="barcode"></svg>
   <div ng-show="$ctrl.type == 'qrcode'" id="biomaterialqr" class="qrcode"></div>
