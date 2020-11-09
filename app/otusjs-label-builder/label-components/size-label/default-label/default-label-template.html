@@ -27,7 +27,7 @@
   <div>
     <div class="default-label-text">
       <h3>{{$ctrl.baseInfo.participant_name}}</h3>
-      <div layout-align="space-between center">
+      <div layout="row" layout-align="space-between center">
         <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
         <span>Sexo:{{$ctrl.baseInfo.gender}}</span>
       </div>
@@ -49,11 +49,11 @@
 <!--biomaterial-->
 <div ng-show="$ctrl.componentLabel == 'biomaterial' && $ctrl.type == 'barcode'" class="default-label">
   <p>{{$ctrl.biomaterial.label}}</p>
-  <div ng-show="$ctrl.identified"  layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+  <div ng-show="$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
     <span>{{$ctrl.baseInfo.participant_name}}</span></br>
     <span>Sexo:{{$ctrl.baseInfo.gender}}</span>
   </div>
-  <div ng-show="!$ctrl.identified"  layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+  <div ng-show="!$ctrl.identified" layout="row"  layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
     <span>Part:_______</span></br>
     <span>Sexo:__</span>
   </div>
@@ -78,11 +78,11 @@
      class="default-label">
   <div>
     <p>{{$ctrl.biomaterial.label}}</p>
-    <div ng-show="$ctrl.identified"  layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+    <div ng-show="$ctrl.identified" layout="row"  layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>{{$ctrl.baseInfo.participant_name}}</span></br>
       <span>Sexo:{{$ctrl.baseInfo.gender}}</span>
     </div>
-    <div ng-show="!$ctrl.identified"  layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+    <div ng-show="!$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>Part:_______</span></br>
       <span>Sexo:__</span>
     </div>
