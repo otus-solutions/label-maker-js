@@ -26,8 +26,6 @@
         <p style="width: 55.771px">{{$ctrl.biomaterial.label}}</p>
         <p>{{$ctrl.biomaterial.code}}</p>
         <p>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</p>
-        <p ng-show="$ctrl.identified">P:{{$ctrl.baseInfo.participant_name}}</p>
-        <p ng-show="!$ctrl.identified">P:_________</p>
         <p ng-show="$ctrl.identified">NR:{{$ctrl.baseInfo.recruitment_number}}</p>
         <p ng-show="!$ctrl.identified">NR:________</p>
       </div>
