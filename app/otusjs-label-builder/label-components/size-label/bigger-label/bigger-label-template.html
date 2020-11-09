@@ -24,23 +24,25 @@
   <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
     <span>{{$ctrl.biomaterial.code}}</span></br>
   </div>
-  <div class="label-text" ng-show="$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-    <span>Part.:{{$ctrl.baseInfo.participant_name}}</span></br>
-  </div>
-  <div class="label-text" ng-show="!$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-    <span>Part.:__________</span></br>
-  </div>
-  <div class="label-text" ng-show="$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-    <span>RN:{{$ctrl.baseInfo.recruitment_number}}</span></br>
-  </div>
-  <div class="label-text" ng-show="!$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-    <span>RN:___________</span></br>
-  </div>
-  <div class="label-text" ng-show="$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-    <span>DN:{{$ctrl.baseInfo.birthday}} SEXO: {{$ctrl.baseInfo.gender}}</span></br>
-  </div>
-  <div class="label-text" ng-show="!$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-    <span>DN:_______ SEXO: __</span></br>
+  <div layout-align="start start">
+    <div class="label-text" ng-show="$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+      <span>Part.:{{$ctrl.baseInfo.participant_name}}</span></br>
+    </div>
+    <div class="label-text" ng-show="!$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+      <span>Part.:__________</span></br>
+    </div>
+    <div class="label-text" ng-show="$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+      <span>RN:{{$ctrl.baseInfo.recruitment_number}}</span></br>
+    </div>
+    <div class="label-text" ng-show="!$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+      <span>RN:___________</span></br>
+    </div>
+    <div class="label-text" ng-show="$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+      <span>DN:{{$ctrl.baseInfo.birthday}} SEXO: {{$ctrl.baseInfo.gender}}</span></br>
+    </div>
+    <div class="label-text" ng-show="!$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
+      <span>DN:_______ SEXO: __</span></br>
+    </div>
   </div>
   <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
     <span>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span></br>
