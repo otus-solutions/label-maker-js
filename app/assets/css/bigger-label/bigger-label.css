@@ -13,17 +13,6 @@
   }
 }
 
-.bigger-label {
-  width: 40mm;
-  height: 40mm;
-  margin: 0.4mm 0.6mm 0.4mm 0.6mm;
-  position: relative;
-  /* margin: auto; */
-  padding: 2px;
-  border-radius: 10mm;
-  background: gainsboro;
-}
-
 .bigger-label p {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 12px;
