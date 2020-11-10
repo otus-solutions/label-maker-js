@@ -29,6 +29,7 @@
         <p>{{$ctrl.biomaterial.label}}</p>
         <p>{{$ctrl.biomaterial.code}}</p>
         <p ng-show="$ctrl.baseInfo.laboratoryIdentification != null">K:{{$ctrl.baseInfo.laboratoryIdentification}}</p>
+        <p ng-show="$ctrl.baseInfo.laboratoryIdentification == null && $ctrl.identified">P:{{$ctrl.baseInfo.participant_name}}</p>
         <p ng-show="$ctrl.identified">NR:{{$ctrl.baseInfo.recruitment_number}}</p>
         <p ng-show="!$ctrl.identified">NR:________</p>
       </div>
