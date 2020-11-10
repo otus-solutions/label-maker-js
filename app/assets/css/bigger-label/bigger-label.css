@@ -1,16 +1,13 @@
 /*bigger size*/
-
-@media screen {
-  .bigger-label {
-    width: 40mm;
-    height: 40mm;
-    margin: 0.4mm 0.6mm 0.4mm 0.8mm;
-    position: relative;
-    /* margin: auto; */
-    padding: 2px;
-    border-radius: 10mm;
-    background: gainsboro;
-  }
+.bigger-label {
+  width: 40mm;
+  height: 40mm;
+  margin: 0.4mm 0.9mm 0.4mm 0.9mm;
+  position: relative;
+  /* margin: auto; */
+  padding: 2px;
+  border-radius: 10mm;
+  background: gainsboro;
 }
 
 .bigger-label p {
