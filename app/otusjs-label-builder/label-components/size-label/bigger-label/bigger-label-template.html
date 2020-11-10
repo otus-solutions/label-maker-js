@@ -4,7 +4,6 @@
   <p>{{$ctrl.baseInfo.participant_name}}</p>
   <div class="label-text" layout-align="space-between center" layout="row" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
     <span>{{$ctrl.baseInfo.recruitment_number}}</span></br>
-    <span>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span></br>
   </div>
   <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
     <span>DN: {{$ctrl.baseInfo.birthday}} SEXO: {{$ctrl.baseInfo.gender}}</span></br>
@@ -40,11 +39,11 @@
     <div class="label-text" ng-show="$ctrl.identified" layout-align="space-between center" layout="row"
          ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>DN:{{$ctrl.baseInfo.birthday}}</span></br>
-      <span>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span></br>
+      <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span></br>
     </div>
     <div class="label-text" ng-show="!$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>DN:_______</span></br>
-      <span>KIT:____</span></br>
+      <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">KIT:____</span></br>
     </div>
   </div>
   <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
