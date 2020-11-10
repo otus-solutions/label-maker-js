@@ -25,8 +25,8 @@
     <div layout="row">
       <svg ng-show="$ctrl.type == 'barcode'" id="biomaterialbarcode" class="barcode"></svg>
       <div ng-show="$ctrl.type == 'qrcode'" id="biomaterialqr" class="qrcode"></div>
-      <div ng-show="$ctrl.type == 'qrcode'" class="label-vertical-text">
-        <p style="width: 55.771px">{{$ctrl.biomaterial.label}}</p>
+      <div ng-show="$ctrl.type == 'qrcode'">
+        <p>{{$ctrl.biomaterial.label}}</p>
         <p>{{$ctrl.biomaterial.code}}</p>
         <p>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</p>
         <p ng-show="$ctrl.identified">NR:{{$ctrl.baseInfo.recruitment_number}}</p>
