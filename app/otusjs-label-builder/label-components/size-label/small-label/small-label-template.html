@@ -8,7 +8,7 @@
       <div ng-show="$ctrl.type == 'qrcode'" class="label-text">
         <p>{{$ctrl.baseInfo.participant_name}}</p>
         <p>NR:{{$ctrl.baseInfo.recruitment_number}}</p>
-        <p>SEXO:{{$ctrl.baseInfo.gender}}</p>
+        <p>GEN:{{$ctrl.baseInfo.gender}}</p>
         <p>DN:{{$ctrl.baseInfo.birthday}}</p>
       </div>
     </div>
@@ -28,7 +28,7 @@
       <div ng-show="$ctrl.type == 'qrcode'" class="label-text">
         <p>{{$ctrl.biomaterial.label}}</p>
         <p>{{$ctrl.biomaterial.code}}</p>
-        <p>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</p>
+        <p>K:{{$ctrl.baseInfo.laboratoryIdentification}}</p>
         <p ng-show="$ctrl.identified">NR:{{$ctrl.baseInfo.recruitment_number}}</p>
         <p ng-show="!$ctrl.identified">NR:________</p>
       </div>
@@ -46,9 +46,9 @@
       <div ng-show="$ctrl.type == 'qrcode'" id="unattachedqr" class="qrcode"></div>
       <div ng-show="$ctrl.type == 'qrcode'" class="label-text">
         <p>Laboratório</p>
-        <p>Centro:{{$ctrl.baseInfo.laboratoryFieldCenter}}</p>
+        <p>CEN:{{$ctrl.baseInfo.laboratoryFieldCenter}}</p>
         <p>CQ:{{$ctrl.baseInfo.cq_group}}</p>
-        <p>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</p>
+        <p>K:{{$ctrl.baseInfo.laboratoryIdentification}}</p>
         <p>_________</p>
       </div>
     </div>
