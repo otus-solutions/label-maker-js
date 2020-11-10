@@ -3,10 +3,10 @@
      layout="column" layout-align="start center" class="bigger-label" xmlns="http://www.w3.org/1999/html">
   <p>{{$ctrl.baseInfo.participant_name}}</p>
   <div class="label-text" layout-align="space-between center" layout="row" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-    <span>{{$ctrl.baseInfo.recruitment_number}}</span></br>
+    <span>{{$ctrl.baseInfo.recruitment_number}}</span>
   </div>
   <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-    <span>DN: {{$ctrl.baseInfo.birthday}} SEXO: {{$ctrl.baseInfo.gender}}</span></br>
+    <span>DN: {{$ctrl.baseInfo.birthday}} SEXO: {{$ctrl.baseInfo.gender}}</span>
   </div>
   <svg ng-show="$ctrl.type == 'barcode'" id="participantbarcode" class="barcode"></svg>
   <div ng-show="$ctrl.type == 'qrcode'" id="participantqr" class="qrcode"></div>
@@ -19,31 +19,31 @@
     {{$ctrl.biomaterial.label}}
   </p>
   <div class="label-text">
-    <span>{{$ctrl.biomaterial.code}}</span></br>
+    <span>{{$ctrl.biomaterial.code}}</span>
   </div>
   <div layout-align="start start">
     <div class="label-text" ng-show="$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-      <span>PART.:{{$ctrl.baseInfo.participant_name}}</span></br>
-      <span>SEXO: {{$ctrl.baseInfo.gender}}</span></br>
+      <span>PART.:{{$ctrl.baseInfo.participant_name}}</span>
+      <span style="margin-left: 1mm">SEXO: {{$ctrl.baseInfo.gender}}</span>
     </div>
     <div class="label-text" ng-show="!$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-      <span>PART.:_______</span></br>
-      <span>SEXO:__</span></br>
+      <span>PART.:_______</span>
+      <span style="margin-left: 1mm">SEXO:__</span>
     </div>
     <div class="label-text" ng-show="$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-      <span>RN:{{$ctrl.baseInfo.recruitment_number}}</span></br>
+      <span>RN:{{$ctrl.baseInfo.recruitment_number}}</span>
     </div>
     <div class="label-text" ng-show="!$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-      <span>RN:___________</span></br>
+      <span>RN:___________</span>
     </div>
     <div class="label-text" ng-show="$ctrl.identified" layout-align="space-between center" layout="row"
          ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-      <span>DN:{{$ctrl.baseInfo.birthday}}</span></br>
-      <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span></br>
+      <span>DN:{{$ctrl.baseInfo.birthday}}</span>
+      <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span>
     </div>
     <div class="label-text" ng-show="!$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-      <span>DN:_______</span></br>
-      <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">KIT:____</span></br>
+      <span>DN:_______</span>
+      <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">KIT:____</span>
     </div>
   </div>
   <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
@@ -56,13 +56,13 @@
 <div ng-show="$ctrl.componentLabel == 'unattached'" layout="column" layout-align="start center" class="bigger-label">
   <p>Laboratório</p>
   <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-    <span>Centro:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span></br>
+    <span>Centro:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span>
   </div>
   <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-    <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
+    <span>CQ:{{$ctrl.baseInfo.cq_group}}</span>
   </div>
   <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-    <span>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span></br>
+    <span>KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span>
   </div>
   <svg ng-show="$ctrl.type == 'barcode'" id="unattachedbarcode" class="barcode"></svg>
   <div ng-show="$ctrl.type == 'qrcode'" id="unattachedqr" class="qrcode"></div>
