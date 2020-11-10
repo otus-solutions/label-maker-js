@@ -1,5 +1,5 @@
 @page {
-  size: 108mm 41mm;
+  size: 70mm 41mm;
   margin: 0mm;
 }
 
@@ -11,6 +11,6 @@
 
 @media print {
   li:nth-child(even) {
-    margin-left: 10mm;
+    margin-left: 5mm;
   }
 }
