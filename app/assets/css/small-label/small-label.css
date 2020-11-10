@@ -20,24 +20,14 @@
 }
 
 .small-label .label-text {
-  font-size: 7px;
-}
-
-.small-label .label-vertical-text {
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 8px;
-  font-weight: bolder;
-  letter-spacing: 0.5px;
-  width: 55.771px;
-  height: 49.500px;
-  transform: rotate(90deg);
+  font-size: 10px;
   position: relative;
-  right: 5px;
 }
 
 .small-label .qrcode {
   position: relative;
-  left: 5px;
+  left: 1.5px;
+  top: 5px;
 }
 
 .small-label .barcode {
