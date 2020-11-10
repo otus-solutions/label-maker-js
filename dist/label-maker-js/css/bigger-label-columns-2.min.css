@@ -1,1 +1,1 @@
-@page{size:101mm 41mm;margin:0}.label-grid{display:grid;grid-template-columns:repeat(2,1fr)}@media print{li:nth-child(even){margin-left:10mm}}
+@page{size:107mm 41mm;margin:0}.label-grid{display:grid;grid-template-columns:repeat(2,1fr)}@media print{li:nth-child(even){margin-left:10mm}}
