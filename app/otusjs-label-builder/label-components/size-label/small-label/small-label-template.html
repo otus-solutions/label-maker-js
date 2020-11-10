@@ -9,7 +9,7 @@
         <p>{{$ctrl.baseInfo.participant_name}}</p>
         <p>NR:{{$ctrl.baseInfo.recruitment_number}}</p>
         <p>GEN:{{$ctrl.baseInfo.gender}}</p>
-        <p>DN:{{$ctrl.baseInfo.birthday}}</p>
+        <p>{{$ctrl.baseInfo.birthday}}</p>
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@
       <div ng-show="$ctrl.type == 'qrcode'" class="label-text">
         <p>{{$ctrl.biomaterial.label}}</p>
         <p>{{$ctrl.biomaterial.code}}</p>
-        <p>K:{{$ctrl.baseInfo.laboratoryIdentification}}</p>
+        <p ng-show="$ctrl.baseInfo.laboratoryIdentification != null">K:{{$ctrl.baseInfo.laboratoryIdentification}}</p>
         <p ng-show="$ctrl.identified">NR:{{$ctrl.baseInfo.recruitment_number}}</p>
         <p ng-show="!$ctrl.identified">NR:________</p>
       </div>
