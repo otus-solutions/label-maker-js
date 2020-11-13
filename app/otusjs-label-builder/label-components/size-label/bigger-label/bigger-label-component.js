@@ -31,7 +31,6 @@
 
         self.$onInit = function() {
           $compile($element.contents())($scope);
-          console.info($ctrl.baseInfo.participant_name.slice(0, 3))
           if(self.biomaterial && self.biomaterial.hasOwnProperty('aliquotCode')){
             self.biomaterial.code = self.biomaterial.aliquotCode
           }
