@@ -22,13 +22,16 @@
 .small-label .label-text {
   font-size: 10px;
   position: relative;
-  top: 5px;
+}
+
+.above-text {
+  font-size: 10px;
+  position: relative;
 }
 
 .small-label .qrcode {
   position: relative;
   left: 1.5px;
-  top: 9px;
 }
 
 .small-label .barcode {
