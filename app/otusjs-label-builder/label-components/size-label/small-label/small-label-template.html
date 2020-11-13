@@ -56,7 +56,10 @@
 <div ng-show="$ctrl.componentLabel == 'unattached'" layout="row" class="small-label">
   <div class="small-useble-label">
     <p ng-show="$ctrl.type == 'qrcode'" class="above-text">Laboratório</p>
-    <div layout="row" layout-align="space-between center" ng-show="$ctrl.type == 'qrcode'">
+    <div ng-show="$ctrl.type =='barcode'">
+      <p>Laboratório</p>
+    </div>
+    <div layout="row" layout-align="space-between center" ng-show="$ctrl.type =='barcode'">
       <p>C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</p>
       <p>K:{{$ctrl.baseInfo.laboratoryIdentification}}</p>
     </div>
