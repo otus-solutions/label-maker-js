@@ -18,16 +18,16 @@
   <p>
     {{$ctrl.biomaterial.label}}
   </p>
-  <div class="label-text">
+  <div class="label-text" layout="row" layout-align="space-between center">
     <span>{{$ctrl.biomaterial.code}}</span>
+    <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">K:{{$ctrl.baseInfo.laboratoryIdentification}}</span>
   </div>
   <div layout-align="start start">
     <div class="label-text" ng-show="$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-      <span>PART.:{{$ctrl.baseInfo.participant_name}}</span>
-      <span style="margin-left: 1mm">SEXO: {{$ctrl.baseInfo.gender}}</span>
+      <span>{{$ctrl.baseInfo.participant_name.slice(0, 10)}} <span ng-show="$ctrl.baseInfo.participant_name.length > 10">...</span></span>
     </div>
     <div class="label-text" ng-show="!$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-      <span>PART.:_______</span>
+      <span>P:_______</span>
       <span style="margin-left: 1mm">SEXO:__</span>
     </div>
     <div class="label-text" ng-show="$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
@@ -39,7 +39,7 @@
     <div class="label-text" ng-show="$ctrl.identified" layout-align="space-between center" layout="row"
          ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>DN:{{$ctrl.baseInfo.birthday}}</span>
-      <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">KIT:{{$ctrl.baseInfo.laboratoryIdentification}}</span>
+      <span style="margin-left: 1mm">S: {{$ctrl.baseInfo.gender}}</span>
     </div>
     <div class="label-text" ng-show="!$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>DN:_______</span>
