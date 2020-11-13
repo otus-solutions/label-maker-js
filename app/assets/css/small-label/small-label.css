@@ -30,6 +30,7 @@
 
 p {
   font-size: 10px;
+  z-index: 1;
 }
 
 .small-label .qrcode {
