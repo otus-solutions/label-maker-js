@@ -24,17 +24,16 @@
   </div>
   <div layout-align="start start">
     <div class="label-text" ng-show="$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-      <span>{{$ctrl.baseInfo.participant_name.slice(0, 10)}} <span ng-show="$ctrl.baseInfo.participant_name.length > 10">...</span></span>
+      <span>{{$ctrl.baseInfo.participant_name.slice(0, 3)}} <span ng-show="$ctrl.baseInfo.participant_name.length > 3">...</span></span>
     </div>
     <div class="label-text" ng-show="!$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>P:_______</span>
-      <span style="margin-left: 1mm">SEXO:__</span>
     </div>
     <div class="label-text" ng-show="$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>RN:{{$ctrl.baseInfo.recruitment_number}}</span>
     </div>
     <div class="label-text" ng-show="!$ctrl.identified" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-      <span>RN:___________</span>
+      <span>RN:__________</span>
     </div>
     <div class="label-text" ng-show="$ctrl.identified" layout-align="space-between center" layout="row"
          ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
@@ -42,8 +41,8 @@
       <span style="margin-left: 1mm">S: {{$ctrl.baseInfo.gender}}</span>
     </div>
     <div class="label-text" ng-show="!$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-      <span>DN:_______</span>
-      <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">KIT:____</span>
+      <span>DN:__/__/____</span>
+      <span style="margin-left: 1mm">S:__</span>
     </div>
   </div>
   <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
