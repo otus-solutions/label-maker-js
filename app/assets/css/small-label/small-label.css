@@ -21,6 +21,7 @@
 
 .small-label .label-text {
   position: relative;
+  top: 2px;
 }
 
 .above-text {
@@ -39,7 +40,7 @@ p {
 .small-label .barcode {
   position: absolute;
   left: 30%;
-  top: 30%;
+  top: 42%;
   bottom: 0;
   transform: translate(-50%, -5%) !important;
   background-color: white;
