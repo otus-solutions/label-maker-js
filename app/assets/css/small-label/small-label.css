@@ -26,6 +26,7 @@
 
 .above-text {
   position: relative;
+  left: 1.5px;
 }
 
 p {
