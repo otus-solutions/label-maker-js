@@ -64,7 +64,6 @@
       <p>K:{{$ctrl.baseInfo.laboratoryIdentification}}</p>
     </div>
     <div layout="row">
-      <p ng-show="$ctrl.type =='barcode'">{{$ctrl.baseInfo.laboratoryFieldCenter}}</p>
       <svg ng-show="$ctrl.type == 'barcode'" id="unattachedbarcode" class="barcode"></svg>
       <div ng-show="$ctrl.type == 'qrcode'" id="unattachedqr" class="qrcode"></div>
       <div ng-show="$ctrl.type == 'qrcode'" class="label-text">
