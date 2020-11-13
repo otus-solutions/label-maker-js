@@ -20,13 +20,15 @@
 }
 
 .small-label .label-text {
-  font-size: 10px;
   position: relative;
 }
 
 .above-text {
-  font-size: 10px;
   position: relative;
+}
+
+p {
+  font-size: 10px;
 }
 
 .small-label .qrcode {
