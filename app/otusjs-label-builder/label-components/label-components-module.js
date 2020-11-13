@@ -19,7 +19,7 @@
       'BARCODE_SMALL_SETTINGS', {
         format: 'CODE39',
         width: 0.4,
-        height: 20,
+        height: 10,
         displayValue: true,
         font: "monospace",
         textAlign: "center",

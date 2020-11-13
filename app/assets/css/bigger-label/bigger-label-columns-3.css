@@ -1,5 +1,5 @@
 @page {
-  size: 134mm 41mm;
+  size: 190mm 41mm;
   margin: 0mm;
 }
 
@@ -9,6 +9,8 @@
   grid-template-columns: repeat(3, 1fr)
 }
 
-li:nth-child(even) {
-  margin-left: 10mm;
+@media print {
+  li:nth-child(even) {
+    margin-left: 3mm;
+  }
 }
