@@ -1,7 +1,7 @@
 <!--participant-->
 <div ng-show="$ctrl.componentLabel == 'participant'"
      layout="column" layout-align="start center" class="bigger-label" xmlns="http://www.w3.org/1999/html">
-  <p>{{$ctrl.baseInfo.participant_name}}</p>
+  <p>{{$ctrl.baseInfo.participant_name.slice(0, 13)}} <span ng-show="$ctrl.baseInfo.participant_name.length > 13">...</span></p>
   <div class="label-text" layout-align="space-between center" layout="row" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
     <span>{{$ctrl.baseInfo.recruitment_number}}</span>
   </div>
