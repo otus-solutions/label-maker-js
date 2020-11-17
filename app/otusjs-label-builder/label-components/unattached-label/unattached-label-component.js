@@ -3,12 +3,13 @@
 
     angular
       .module('otusjs.labelMaker.labelBuilder.labelComponents')
-      .component('participantLabel', {
+      .component('unattachedLabel', {
           transclude: true,
-          templateUrl: 'app/otusjs-label-builder/label-components/participant-label/participant-label-template.html',
+          templateUrl: 'app/otusjs-label-builder/label-components/unattached-label/unattached-label-template.html',
           controller: Controller,
           bindings: {
-            base: '<'
+            base: '<',
+            labInfo: '='
           }
       });
 

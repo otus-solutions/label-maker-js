@@ -1,0 +1,1 @@
+@page{size:380mm 41mm;margin:0}.label-grid{display:grid;grid-template-columns:repeat(4,160px)}@media print{li:nth-child(even){margin-left:3mm}}

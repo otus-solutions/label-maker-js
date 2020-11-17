@@ -7,7 +7,8 @@
       templateUrl: 'app/otusjs-main-view/main-view-template.html',
       controller: Controller,
       bindings: {
-        labelData: '<'
+        labelData: '<',
+        buttonName: '<'
       }
     });
 
@@ -19,7 +20,7 @@
     'otusjs.labelMaker.labelBuilder.LabelService'
   ];
 
-  function Controller($scope, $rootScope, $compile, $element, LabelService) {
+  function Controller($scope, $rootScope, $compile) {
     var self = this;
     var LABEL_PAGE = '<label-page/>';
 
@@ -35,7 +36,7 @@
 
     function generateLabelPage() {
       var scope = $rootScope.$new();
-      scope.labelData = self.labelData;
+      scope.labelData = self.labelData
       var labelPage = $compile(LABEL_PAGE)(scope);
     }
 

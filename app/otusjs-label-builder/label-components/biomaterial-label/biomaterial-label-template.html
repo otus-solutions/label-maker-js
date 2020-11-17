@@ -1,0 +1,17 @@
+<div>
+  <div ng-if="$ctrl.labelSize == 'default'">
+    <default-label biomaterial="$ctrl.biomaterial"
+                   base="$ctrl.baseInfo"
+                   component-label="'biomaterial'"/>
+  </div>
+  <div ng-if="$ctrl.labelSize == 'small'">
+    <small-label  biomaterial="$ctrl.biomaterial"
+                  base="$ctrl.baseInfo"
+                  component-label="'biomaterial'"/>
+  </div>
+  <div ng-if="$ctrl.labelSize == 'bigger'">
+    <bigger-label biomaterial="$ctrl.biomaterial"
+                  base="$ctrl.baseInfo"
+                  component-label="'biomaterial'"/>
+  </div>
+</div>

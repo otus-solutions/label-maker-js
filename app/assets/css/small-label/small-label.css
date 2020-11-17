@@ -1,0 +1,49 @@
+/*small size*/
+.small-label {
+  width: 41.27mm;
+  height: 15.87mm;
+  margin: 0.4mm 0.2mm;
+  position: relative;
+  /* margin: auto; */
+  padding: 2px;
+  border-radius: 10mm;
+  background: #fff;
+}
+
+.small-useble-label {
+  width: 25.4mm;
+}
+
+.small-unuseble-label {
+  width: 15.87mm;
+  background: gainsboro;
+}
+
+.small-label .label-text {
+  position: relative;
+  top: 2px;
+}
+
+.above-text {
+  position: relative;
+  left: 1.5px;
+}
+
+p {
+  font-size: 10px;
+  z-index: 1;
+}
+
+.small-label .qrcode {
+  position: relative;
+  left: 1.5px;
+}
+
+.small-label .barcode {
+  position: absolute;
+  left: 30%;
+  top: 42%;
+  bottom: 0;
+  transform: translate(-50%, -5%) !important;
+  background-color: white;
+}

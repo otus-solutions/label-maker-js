@@ -15,7 +15,7 @@
 
       _baseInfo = {},
       _unattachedLaboratoryInfo = {},
-      _tubesList,
+      _bioMaterialList,
       baseInfoModel = {
         cq_group: null,
         participant_name: null,
@@ -29,13 +29,13 @@
         laboratoryFieldCenter: null
       };
 
-    self.fetchTubesData = fetchTubesData;
+    self.fetchBioMaterialData = fetchBioMaterialData;
     self.getBaseInfo = getBaseInfo;
     self.getLaboratoryInfo = getLaboratoryInfo;
-    self.getTubesList = getTubesList;
+    self.getBioMaterialList = getBioMaterialList;
     self.pushInfo = pushInfo;
 
-    function fetchTubesData() {
+    function fetchBioMaterialData() {
       _getInfo().getData().$promise
         .then(function (data) {
           _setInfo(data);
@@ -54,14 +54,14 @@
       return _unattachedLaboratoryInfo;
     }
 
-    function getTubesList() {
-      return _tubesList;
+    function getBioMaterialList() {
+      return _bioMaterialList;
     }
 
     function _setInfo(data) {
       angular.extend(_baseInfo, baseInfoModel, data);
       angular.extend(_unattachedLaboratoryInfo, unattachedLaboratoryInfoModel, data);
-      _tubesList = data.tubes;
+      _bioMaterialList = data.tubes ? data.tubes : data.aliquots ;
     }
 
     function pushInfo(labParticipant) {
@@ -69,7 +69,7 @@
         var parse = labParticipant;
         _setInfo(parse);
       } else {
-        fetchTubesData();
+        fetchBioMaterialData();
       }
     }
 
