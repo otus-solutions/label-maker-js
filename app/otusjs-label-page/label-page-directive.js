@@ -31,6 +31,8 @@
       function init() {
         self.baseInfo = {};
         self.bioMaterialList = [];
+        self.showKitLabel = $scope.$parent.showKitLabel;
+        self.showParticipantLabel = $scope.$parent.showParticipantLabel;
         LabelService.pushInfo($scope.$parent.labelData);
         _setInfo();
       }
