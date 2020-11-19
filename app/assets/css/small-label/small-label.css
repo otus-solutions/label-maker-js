@@ -21,7 +21,7 @@
 
 .small-label .label-text {
   position: relative;
-  top: 2px;
+  top: 7px;
 }
 
 .above-text {
@@ -30,7 +30,7 @@
 }
 
 p {
-  font-size: 10px;
+  font-size: 7px;
   z-index: 1;
 }
 

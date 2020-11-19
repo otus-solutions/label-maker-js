@@ -8,6 +8,8 @@
       controller: Controller,
       bindings: {
         labelData: '<',
+        showKitLabel: '<',
+        showParticipantLabel: '<',
         buttonName: '<'
       }
     });
@@ -37,6 +39,8 @@
     function generateLabelPage() {
       var scope = $rootScope.$new();
       scope.labelData = self.labelData
+      scope.showKitLabel = self.showKitLabel
+      scope.showParticipantLabel = self.showParticipantLabel
       var labelPage = $compile(LABEL_PAGE)(scope);
     }
 

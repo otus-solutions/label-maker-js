@@ -1,10 +1,10 @@
 <div id="print-page" layout-align="center center" ng-if="$ctrl.loadComponents">
   <ul layout-align="center center" ng-class="'label-grid'">
-    <li ng-if="$ctrl.laboratoryInfo.laboratoryIdentification == null && $ctrl.baseInfo.printStructure.identified.value">
-      <participant-label base="$ctrl.baseInfo" ng-if="$ctrl.laboratoryInfo.laboratoryIdentification == null && $ctrl.baseInfo.printStructure.identified.value"></participant-label>
+    <li ng-if="$ctrl.showParticipantLabel">
+      <participant-label base="$ctrl.baseInfo"></participant-label>
     </li>
-    <li ng-if="$ctrl.laboratoryInfo.laboratoryIdentification != null">
-      <unattached-label base="$ctrl.laboratoryInfo" ng-if="$ctrl.laboratoryInfo.laboratoryIdentification != null"></unattached-label>
+    <li ng-if="$ctrl.showKitLabel">
+      <unattached-label base="$ctrl.laboratoryInfo"></unattached-label>
     </li>
     <li class="green" ng-repeat="biomaterial in $ctrl.newbiomaterialList track by $index">
       <biomaterial-label base="$ctrl.baseInfo" biomaterial="biomaterial"></biomaterial-label>
