@@ -9,6 +9,7 @@
           controller: Controller,
           bindings: {
             base: '<',
+            labelHeader: '<',
             labInfo: '='
           }
       });

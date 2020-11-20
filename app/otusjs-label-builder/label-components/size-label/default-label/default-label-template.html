@@ -110,7 +110,7 @@
 <!--barcode-->
 <div ng-show="$ctrl.componentLabel == 'unattached' && $ctrl.type == 'barcode'" class="default-label">
   <div>
-    <p>Laboratório</p>
+    <p>{{$ctrl.labelHeader}}</p>
     <span>C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span></br>
     <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
     <span>ID:{{$ctrl.baseInfo.laboratoryIdentification}}</span></br>
@@ -124,7 +124,7 @@
      layout="row" layout-align="space-between center"
      class="default-label">
   <div>
-    <p>Laboratório</p>
+    <p>{{$ctrl.labelHeader}}</p>
     <div>
       <span>C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span></br>
       <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
