@@ -1,14 +1,14 @@
 <div>
   <div ng-if="$ctrl.labelSize == 'default'">
-    <default-label ng-show="$ctrl.baseInfo.printStructure.labelSize.value == 'default'"
+    <default-label label-header="$ctrl.labelHeader" ng-show="$ctrl.baseInfo.printStructure.labelSize.value == 'default'"
                    component-label="'unattached'" base="$ctrl.baseInfo"/>
   </div>
   <div ng-if="$ctrl.labelSize == 'small'">
-    <small-label ng-show="$ctrl.baseInfo.printStructure.labelSize.value == 'small'"
+    <small-label label-header="$ctrl.labelHeader" ng-show="$ctrl.baseInfo.printStructure.labelSize.value == 'small'"
                  component-label="'unattached'" base="$ctrl.baseInfo"/>
   </div>
   <div ng-if="$ctrl.labelSize == 'bigger'">
-    <bigger-label ng-show="$ctrl.baseInfo.printStructure.labelSize.value == 'bigger'"
+    <bigger-label label-header="$ctrl.labelHeader" ng-show="$ctrl.baseInfo.printStructure.labelSize.value == 'bigger'"
                  component-label="'unattached'" base="$ctrl.baseInfo"/>
   </div>
 </div>
