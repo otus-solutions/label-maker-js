@@ -10,6 +10,7 @@
         labelData: '<',
         showKitLabel: '<',
         showParticipantLabel: '<',
+        showIdentificationLabels: '<',
         buttonName: '<'
       }
     });
@@ -41,6 +42,7 @@
       scope.labelData = self.labelData
       scope.showKitLabel = self.showKitLabel
       scope.showParticipantLabel = self.showParticipantLabel
+      scope.showIdentificationLabels = self.showIdentificationLabels
       var labelPage = $compile(LABEL_PAGE)(scope);
     }
 

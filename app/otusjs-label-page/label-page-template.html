@@ -1,10 +1,28 @@
 <div id="print-page" layout-align="center center" ng-if="$ctrl.loadComponents">
   <ul layout-align="center center" ng-class="'label-grid'">
+    <li ng-if="$ctrl.showIdentificationLabels">
+      <unattached-label label-header="'TCLE'"  base="$ctrl.laboratoryInfo"></unattached-label>
+    </li>
+    <li ng-if="$ctrl.showIdentificationLabels">
+      <unattached-label label-header="'KIT - ID'"  base="$ctrl.laboratoryInfo"></unattached-label>
+    </li>
+    <li ng-if="$ctrl.showIdentificationLabels">
+      <unattached-label label-header="'TCLE'"  base="$ctrl.laboratoryInfo"></unattached-label>
+    </li>
+    <li ng-if="$ctrl.showIdentificationLabels">
+      <unattached-label label-header="'TCLE'"  base="$ctrl.laboratoryInfo"></unattached-label>
+    </li>
+    <li ng-if="$ctrl.showIdentificationLabels">
+      <unattached-label label-header="'QUESTIONÁRIO'"  base="$ctrl.laboratoryInfo"></unattached-label>
+    </li>
+    <li ng-if="$ctrl.showIdentificationLabels">
+      <unattached-label label-header="'QUESTIONÁRIO'"  base="$ctrl.laboratoryInfo"></unattached-label>
+    </li>
     <li ng-if="$ctrl.showParticipantLabel">
       <participant-label base="$ctrl.baseInfo"></participant-label>
     </li>
     <li ng-if="$ctrl.showKitLabel">
-      <unattached-label base="$ctrl.laboratoryInfo"></unattached-label>
+      <unattached-label label-header="'Laboratório'"  base="$ctrl.laboratoryInfo"></unattached-label>
     </li>
     <li class="green" ng-repeat="biomaterial in $ctrl.newbiomaterialList track by $index">
       <biomaterial-label base="$ctrl.baseInfo" biomaterial="biomaterial"></biomaterial-label>
