@@ -9,6 +9,7 @@
           controller: Controller,
           bindings: {
             componentLabel: "<",
+            labelHeader: '<',
             base: '<',
             biomaterial: '<'
           }

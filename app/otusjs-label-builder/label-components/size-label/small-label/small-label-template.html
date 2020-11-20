@@ -55,7 +55,7 @@
 <!--unattached-->
 <div ng-show="$ctrl.componentLabel == 'unattached'" layout="row" class="small-label">
   <div class="small-useble-label">
-    <p ng-show="$ctrl.type == 'qrcode'" class="above-text">Laboratório</p>
+    <p ng-show="$ctrl.type == 'qrcode'" class="above-text">{{$ctrl.labelHeader}}</p>
     <div ng-show="$ctrl.type =='barcode'">
       <p>Laboratório</p>
     </div>

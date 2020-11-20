@@ -33,6 +33,7 @@
         self.bioMaterialList = [];
         self.showKitLabel = $scope.$parent.showKitLabel;
         self.showParticipantLabel = $scope.$parent.showParticipantLabel;
+        self.showIdentificationLabels = $scope.$parent.showIdentificationLabels;
         LabelService.pushInfo($scope.$parent.labelData);
         _setInfo();
       }
