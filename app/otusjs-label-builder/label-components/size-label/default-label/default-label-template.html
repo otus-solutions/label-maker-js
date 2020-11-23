@@ -49,12 +49,10 @@
 <div ng-show="$ctrl.componentLabel == 'biomaterial' && $ctrl.type == 'barcode'" class="default-label">
   <p>{{$ctrl.biomaterial.label}}</p>
   <div ng-show="$ctrl.identified" layout="row" layout-align="space-between center" >
-    <span>{{$ctrl.baseInfo.participant_name}}</span></br>
-    <span>S:{{$ctrl.baseInfo.gender}}</span>
+    <span>{{$ctrl.baseInfo.participant_name}}</span>
   </div>
   <div ng-show="!$ctrl.identified" layout="row"  layout-align="space-between center" >
-    <span>P:_______</span></br>
-    <span>S:__</span>
+    <span>P:_______</span>
   </div>
   <div ng-show="$ctrl.identified" layout-align="space-between center" layout="row" flex>
     <span>NR:{{$ctrl.baseInfo.recruitment_number}}</span>
@@ -63,10 +61,14 @@
     <span>NR:_______</span>
   </div>
   <div ng-show="$ctrl.identified" layout-align="space-between center" layout="row" flex>
-    <span>DN:{{$ctrl.baseInfo.birthday}}</span>
+    <span>DN:{{$ctrl.baseInfo.birthday}}</span><br>
+    <span>S:{{$ctrl.baseInfo.gender}}</span><br>
+    <span>C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span>
   </div>
   <div ng-show="!$ctrl.identified" layout-align="space-between center" layout="row" flex>
-    <span>DN:{{$ctrl.baseInfo.birthday}}</span>
+    <span>DN:{{$ctrl.baseInfo.birthday}}</span><br>
+    <span>S:__</span>
+    <span>C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span>
   </div>
   <svg id="biomaterialbarcode" class="barcode"></svg>
 </div>
@@ -78,24 +80,26 @@
   <div>
     <p>{{$ctrl.biomaterial.label}}</p>
     <div ng-show="$ctrl.identified" layout="row"  layout-align="space-between center">
-      <span>{{$ctrl.baseInfo.participant_name}}</span></br>
-      <span>S:{{$ctrl.baseInfo.gender}}</span>
+      <span>P:{{$ctrl.baseInfo.participant_name}}</span>
     </div>
     <div ng-show="!$ctrl.identified" layout="row" layout-align="space-between center">
-      <span>P:_______</span></br>
-      <span>S:__</span>
+      <span>P:_______</span>
     </div>
     <div ng-show="$ctrl.identified" layout-align="space-between center" layout="row" flex>
-      <span>NR:{{$ctrl.baseInfo.recruitment_number}}</span>
+      <span>NR:{{$ctrl.baseInfo.recruitment_number}}</span><br>
+      <span>C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span>
     </div>
     <div ng-show="!$ctrl.identified" layout-align="space-between center" layout="row" flex>
-      <span>NR:_______</span>
+      <span>NR:_______</span><br>
+      <span>C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span>
     </div>
     <div ng-show="$ctrl.identified" layout-align="space-between center" layout="row" flex>
-      <span>DN:{{$ctrl.baseInfo.birthday}}</span>
+      <span>DN:{{$ctrl.baseInfo.birthday}}</span><br>
+      <span>S:{{$ctrl.baseInfo.gender}}</span>
     </div>
     <div ng-show="!$ctrl.identified" layout-align="space-between center" layout="row" flex>
-      <span>DN:______</span>
+      <span>DN:______</span></br>
+      <span>S:{{$ctrl.baseInfo.gender}}</span>
     </div>
     <div flex>
       <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">Kit: {{$ctrl.baseInfo.laboratoryIdentification}}</span>
