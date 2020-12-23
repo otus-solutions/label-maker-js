@@ -1,12 +1,15 @@
 <!--participant-->
 <div ng-show="$ctrl.componentLabel == 'participant'" layout="row" class="small-label">
   <div class="small-useble-label">
-    <div layout="row" layout-align="space-between center" ng-show="$ctrl.type =='barcode' && $ctrl.baseInfo.laboratoryIdentification == null">
+    <div layout="row" layout-align="space-between center" ng-show="$ctrl.type =='barcode'">
       <p>{{$ctrl.baseInfo.participant_name.slice(0, 18)}}<span ng-show="$ctrl.baseInfo.participant_name.length > 18">...</span></p>
     </div>
-    <div layout="row" layout-align="space-between center" ng-show="$ctrl.type =='barcode' && $ctrl.baseInfo.laboratoryIdentification == null">
+    <div layout="row" layout-align="space-between center" ng-show="$ctrl.type =='barcode'">
       <p>{{$ctrl.baseInfo.birthday}}</p>
       <p>S:{{$ctrl.baseInfo.gender}}</p>
+    </div>
+    <div layout="row" layout-align="space-between center" ng-show="$ctrl.type =='barcode' && $ctrl.baseInfo.laboratoryIdentification != null">
+      <p>K:{{$ctrl.baseInfo.laboratoryIdentification.toString().slice(0, 10)}}</p>
     </div>
     <p ng-show="$ctrl.type == 'qrcode'" style="position: relative; left: 5px; top:4px" class="above-text">{{$ctrl.baseInfo.participant_name.slice(0, 18)}}<span ng-show="$ctrl.baseInfo.participant_name.length > 18">...</span></p>
     <div layout="row">
