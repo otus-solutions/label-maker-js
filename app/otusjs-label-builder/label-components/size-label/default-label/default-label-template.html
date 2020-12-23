@@ -13,7 +13,10 @@
   </div>
   <div layout-align="space-between center" layout="row" flex>
     <span>DN:{{$ctrl.baseInfo.birthday}}</span>
-    <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">K:{{$ctrl.baseInfo.laboratoryIdentification.slice(0, 10)}}</span>
+  </div>
+  <div ng-show="$ctrl.baseInfo.laboratoryIdentification != null" layout-align="space-between center" layout="row" flex>
+    <span>DN:{{$ctrl.baseInfo.birthday}}</span>
+    <span>K:{{$ctrl.baseInfo.laboratoryIdentification.toString().slice(0, 10)}}</span>
   </div>
   <svg id="participantbarcode" class="barcode"></svg>
 </div>
@@ -36,7 +39,7 @@
     </div>
     <div layout-align="space-between center" layout="row" flex>
       <span>DN:{{$ctrl.baseInfo.birthday}}</span>
-      <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">K:{{$ctrl.baseInfo.laboratoryIdentification.slice(0, 10)}}</span>
+      <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">K:{{$ctrl.baseInfo.laboratoryIdentification.toString().slice(0, 10)}}</span>
     </div>
   </div>
   <div>
@@ -56,11 +59,11 @@
   </div>
   <div ng-show="$ctrl.identified" layout-align="space-between center" layout="row" flex>
     <span>NR:{{$ctrl.baseInfo.recruitment_number}}</span>
-    <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">K:{{$ctrl.baseInfo.laboratoryIdentification.slice(0, 10)}}</span>
+    <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">K:{{$ctrl.baseInfo.laboratoryIdentification.toString().slice(0, 10)}}</span>
   </div>
   <div ng-show="!$ctrl.identified" layout-align="space-between center" layout="row" flex>
     <span>NR:_______</span>
-    <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">K:{{$ctrl.baseInfo.laboratoryIdentification.slice(0, 10)}}</span>
+    <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">K:{{$ctrl.baseInfo.laboratoryIdentification.toString().slice(0, 10)}}</span>
   </div>
   <div ng-show="$ctrl.identified" layout-align="space-between center" layout="row" flex>
     <span>DN:{{$ctrl.baseInfo.birthday}}</span><br>
@@ -104,7 +107,7 @@
       <span>S:{{$ctrl.baseInfo.gender}}</span>
     </div>
     <div flex>
-      <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">K:{{$ctrl.baseInfo.laboratoryIdentification.slice(0, 10)}}</span>
+      <span ng-show="$ctrl.baseInfo.laboratoryIdentification != null">K:{{$ctrl.baseInfo.laboratoryIdentification.toString().slice(0, 10)}}</span>
     </div>
   </div>
   <div>
@@ -119,7 +122,7 @@
     <p>{{$ctrl.labelHeader}}</p>
     <span>C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span></br>
     <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
-    <span>K:{{$ctrl.baseInfo.laboratoryIdentification.slice(0, 10)}}</span></br>
+    <span>K:{{$ctrl.baseInfo.laboratoryIdentification.toString().slice(0, 10)}}</span></br>
   </div>
   <svg ng-show="$ctrl.type == 'barcode'" id="unattachedbarcode" class="barcode"></svg>
 </div>
@@ -134,7 +137,7 @@
     <div>
       <span>C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span></br>
       <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
-      <span>K:{{$ctrl.baseInfo.laboratoryIdentification.slice(0, 10)}}</span></br>
+      <span>K:{{$ctrl.baseInfo.laboratoryIdentification.toString().slice(0, 10)}}</span></br>
     </div>
   </div>
   <div>

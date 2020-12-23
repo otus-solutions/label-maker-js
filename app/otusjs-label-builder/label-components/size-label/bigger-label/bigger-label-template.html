@@ -6,7 +6,7 @@
     <span>{{$ctrl.baseInfo.recruitment_number}}</span>
   </div>
   <div class="label-text" ng-show="$ctrl.baseInfo.laboratoryIdentification != null" layout-align="space-between center" layout="row" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-    <span>K:{{$ctrl.baseInfo.laboratoryIdentification.slice(0, 10)}}</span>
+    <span>K:{{$ctrl.baseInfo.laboratoryIdentification.toString().slice(0, 10)}}</span>
   </div>
   <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
     <span>DN: {{$ctrl.baseInfo.birthday}} S: {{$ctrl.baseInfo.gender}}</span>
@@ -27,7 +27,7 @@
   <div layout-align="start start">
     <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span>
-      <span style="margin-left: 1mm" ng-show="$ctrl.baseInfo.laboratoryIdentification != null">K:{{$ctrl.baseInfo.laboratoryIdentification.slice(0, 10)}}</span>
+      <span style="margin-left: 1mm" ng-show="$ctrl.baseInfo.laboratoryIdentification != null">K:{{$ctrl.baseInfo.laboratoryIdentification.toString().slice(0, 10)}}</span>
     </div>
     <div class="label-text" ng-show="$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>P:{{$ctrl.baseInfo.participant_name.slice(0, 13)}} <span ng-show="$ctrl.baseInfo.participant_name.length > 13">...</span></span>
@@ -67,7 +67,7 @@
     <span>CQ:{{$ctrl.baseInfo.cq_group}}</span>
   </div>
   <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-    <span>K:{{$ctrl.baseInfo.laboratoryIdentification.slice(0, 10)}}</span>
+    <span>K:{{$ctrl.baseInfo.laboratoryIdentification.toString().slice(0, 10)}}</span>
   </div>
   <svg ng-show="$ctrl.type == 'barcode'" id="unattachedbarcode" class="barcode"></svg>
   <div ng-show="$ctrl.type == 'qrcode'" id="unattachedqr" class="qrcode"></div>
