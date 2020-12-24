@@ -35,12 +35,12 @@
     </div>
     <div layout="row"  layout-align="space-between center">
       <p ng-show="$ctrl.type =='barcode'">C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</p>
-      <p ng-show="$ctrl.type =='barcode' && $ctrl.identified && $ctrl.baseInfo.laboratoryIdentification == null">P:{{$ctrl.baseInfo.participant_name.slice(0, 8)}}<span ng-show="$ctrl.baseInfo.participant_name.length > 8">...</span></p>
-      <p ng-show="$ctrl.type =='barcode' && !$ctrl.identified && $ctrl.baseInfo.laboratoryIdentification == null">P:_______</p>
-      <p ng-show="$ctrl.type =='barcode' && $ctrl.identified && $ctrl.baseInfo.laboratoryIdentification == null">DN:{{$ctrl.baseInfo.birthday}}</p>
-      <p ng-show="$ctrl.type =='barcode' && !$ctrl.identified && $ctrl.baseInfo.laboratoryIdentification == null">DN:__/__/____</p>
-      <p ng-show="$ctrl.type =='barcode' && $ctrl.baseInfo.laboratoryIdentification == null && $ctrl.identified">P:{{$ctrl.baseInfo.participant_name.slice(0, 8)}}<span ng-show="$ctrl.baseInfo.participant_name.length > 8">...</span></p>
-      <p ng-show="$ctrl.type =='barcode' && $ctrl.baseInfo.laboratoryIdentification == null && !$ctrl.identified">P:_______</p>
+      <p ng-show="$ctrl.type =='barcode' && $ctrl.identified">P:{{$ctrl.baseInfo.participant_name.slice(0, 8)}}<span ng-show="$ctrl.baseInfo.participant_name.length > 8">...</span></p>
+      <p ng-show="$ctrl.type =='barcode' && !$ctrl.identified">P:_______</p>
+      <p ng-show="$ctrl.type =='barcode' && $ctrl.identified">DN:{{$ctrl.baseInfo.birthday}}</p>
+      <p ng-show="$ctrl.type =='barcode' && !$ctrl.identified">DN:__/__/____</p>
+      <p ng-show="$ctrl.type =='barcode' && $ctrl.identified">P:{{$ctrl.baseInfo.participant_name.slice(0, 8)}}<span ng-show="$ctrl.baseInfo.participant_name.length > 8">...</span></p>
+      <p ng-show="$ctrl.type =='barcode' && !$ctrl.identified">P:_______</p>
       <p ng-show="$ctrl.type =='barcode' && $ctrl.identified">NR:{{$ctrl.baseInfo.recruitment_number}}</p>
       <p ng-show="$ctrl.type =='barcode' && !$ctrl.identified">NR:________</p>
     </div>
@@ -53,8 +53,8 @@
 
         <p ng-show="$ctrl.type =='qrcode'">C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</p>
         <p ng-show="$ctrl.baseInfo.laboratoryIdentification != null">K:{{$ctrl.baseInfo.laboratoryIdentification}}</p>
-        <p ng-show="$ctrl.baseInfo.laboratoryIdentification == null && $ctrl.identified">P:{{$ctrl.baseInfo.participant_name.slice(0, 8)}}<span ng-show="$ctrl.baseInfo.participant_name.length > 8">...</span></p>
-        <p ng-show="$ctrl.baseInfo.laboratoryIdentification == null && !$ctrl.identified">P:_______</p>
+        <p ng-show="$ctrl.identified">P:{{$ctrl.baseInfo.participant_name.slice(0, 8)}}<span ng-show="$ctrl.baseInfo.participant_name.length > 8">...</span></p>
+        <p ng-show="!$ctrl.identified">P:_______</p>
         <p ng-show="$ctrl.identified">NR:{{$ctrl.baseInfo.recruitment_number}}</p>
         <p ng-show="!$ctrl.identified">NR:________</p>
       </div>
