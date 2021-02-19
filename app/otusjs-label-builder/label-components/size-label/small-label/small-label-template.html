@@ -14,7 +14,7 @@
     <p ng-show="$ctrl.type == 'qrcode'" style="position: relative; left: 5px; top:4px" class="above-text">{{$ctrl.baseInfo.participant_name.slice(0, 18)}}<span ng-show="$ctrl.baseInfo.participant_name.length > 18">..</span></p>
     <div layout="row">
       <svg ng-show="$ctrl.type == 'barcode'" id="participantbarcode" class="barcode"></svg>
-      <div ng-show="$ctrl.type == 'qrcode'" id="participantqr" class="qrcode"></div>
+      <div ng-show="$ctrl.type == 'qrcode'" id="participantqr" class="qrcode" style="margin-top: 4px;"></div>
       <div ng-show="$ctrl.type == 'qrcode'" class="label-text">
         <p>NR:{{$ctrl.baseInfo.recruitment_number}}</p>
         <p>S:{{$ctrl.baseInfo.gender}}</p>
@@ -47,7 +47,7 @@
     <p ng-show="$ctrl.type == 'qrcode'" style="position: relative; left: 5px; top: 4px" class="above-text">{{$ctrl.biomaterial.label.slice(0, 18)}}<span ng-show="$ctrl.biomaterial.label.length > 18">..</span></p>
     <div layout="row">
       <svg ng-show="$ctrl.type == 'barcode'" id="biomaterialbarcode" class="barcode"></svg>
-      <div ng-show="$ctrl.type == 'qrcode'" id="biomaterialqr" class="qrcode"></div>
+      <div ng-show="$ctrl.type == 'qrcode'" id="biomaterialqr" class="qrcode" style="margin-top: 4px;"></div>
       <div ng-show="$ctrl.type == 'qrcode'" class="label-text">
         <p>{{$ctrl.biomaterial.code}}</p>
 
@@ -76,7 +76,7 @@
     </div>
     <div layout="row">
       <svg ng-show="$ctrl.type == 'barcode'" id="unattachedbarcode" class="barcode"></svg>
-      <div ng-show="$ctrl.type == 'qrcode'" id="unattachedqr" class="qrcode"></div>
+      <div ng-show="$ctrl.type == 'qrcode'" id="unattachedqr" class="qrcode" style="margin-top: 4px;"></div>
       <div ng-show="$ctrl.type == 'qrcode'" class="label-text">
         <p>C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</p>
         <p>CQ:{{$ctrl.baseInfo.cq_group}}</p>
