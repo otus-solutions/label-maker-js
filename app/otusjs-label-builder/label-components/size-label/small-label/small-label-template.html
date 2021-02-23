@@ -54,11 +54,11 @@
         <p ng-show="$ctrl.type =='qrcode'">C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</p>
         <p ng-show="$ctrl.baseInfo.laboratoryIdentification != null">ID:{{$ctrl.baseInfo.laboratoryIdentification}}</p>
       </div>
-    </div>    
+    </div>
     <div layout="column" style="position: relative; left: 5px;">
         <p ng-show="$ctrl.identified">
-          P:{{$ctrl.baseInfo.participant_name.slice(0, 19)}}
-          <span ng-show="$ctrl.baseInfo.participant_name.length > 19">..</span>
+          P:{{$ctrl.baseInfo.participant_name.slice(0, 15)}}
+          <span ng-show="$ctrl.baseInfo.participant_name.length > 15">..</span>
         </p>
         <p ng-show="!$ctrl.identified">P:_______</p>
         <p ng-show="$ctrl.identified">NR:{{$ctrl.baseInfo.recruitment_number}}</p>
