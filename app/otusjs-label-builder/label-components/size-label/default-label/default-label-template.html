@@ -2,7 +2,9 @@
 <!--barcode-->
 <div ng-show="$ctrl.componentLabel == 'participant' && $ctrl.type == 'barcode'" class="default-label">
   <div class="default-label-text">
-    <h3>{{$ctrl.baseInfo.participant_name}}</h3>
+    <h3>
+      {{$ctrl.baseInfo.participant_name.slice(0, 21).trim()}}<span ng-show="$ctrl.baseInfo.participant_name.length > 21">..</span>
+    </h3>
     <div layout="row" layout-align="space-between center">
       <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
       <span>S:{{$ctrl.baseInfo.gender}}</span>
@@ -25,7 +27,9 @@
      class="default-label">
   <div>
     <div class="default-label-text">
-      <h3>{{$ctrl.baseInfo.participant_name}}</h3>
+      <h3>
+        {{$ctrl.baseInfo.participant_name.slice(0, 14).trim()}}<span ng-show="$ctrl.baseInfo.participant_name.length > 14">..</span>
+      </h3>
       <div layout="row" layout-align="space-between center">
         <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
         <span>S:{{$ctrl.baseInfo.gender}}</span>
@@ -46,12 +50,16 @@
   </div>
 </div>
 
-
 <!--biomaterial-->
+<!--barcode-->
 <div ng-show="$ctrl.componentLabel == 'biomaterial' && $ctrl.type == 'barcode'" class="default-label">
-  <p>{{$ctrl.biomaterial.label}}</p>
+  <p>
+    {{$ctrl.biomaterial.label.slice(0, 19).trim()}}<span ng-show="$ctrl.biomaterial.label.length > 19">..</span>
+  </p>
   <div ng-show="$ctrl.identified" layout="row" layout-align="space-between center" >
-    <span>{{$ctrl.baseInfo.participant_name}}</span>
+    <p>
+      {{$ctrl.baseInfo.participant_name.slice(0, 19).trim()}}<span ng-show="$ctrl.baseInfo.participant_name.length > 19">..</span>
+    </p>
   </div>
   <div ng-show="!$ctrl.identified" layout="row"  layout-align="space-between center" >
     <span>P:_______</span>
@@ -82,9 +90,13 @@
      layout="row" layout-align="space-between center"
      class="default-label">
   <div>
-    <p>{{$ctrl.biomaterial.label}}</p>
+    <p>
+      {{$ctrl.biomaterial.label.slice(0, 12).trim()}}<span ng-show="$ctrl.biomaterial.label.length > 12">..</span>
+    </p>
     <div ng-show="$ctrl.identified" layout="row"  layout-align="space-between center">
-      <span>P:{{$ctrl.baseInfo.participant_name}}</span>
+      <p>
+        P:{{$ctrl.baseInfo.participant_name.slice(0, 12).trim()}}<span ng-show="$ctrl.baseInfo.participant_name.length > 12">..</span>
+      </p>
     </div>
     <div ng-show="!$ctrl.identified" layout="row" layout-align="space-between center">
       <span>P:_______</span>
@@ -118,7 +130,9 @@
 <!--barcode-->
 <div ng-show="$ctrl.componentLabel == 'unattached' && $ctrl.type == 'barcode'" class="default-label">
   <div>
-    <p>{{$ctrl.labelHeader}}</p>
+    <p>
+      {{$ctrl.labelHeader.slice(0, 20).trim()}}<span ng-show="$ctrl.labelHeader.length > 20">..</span>
+    </p>
     <span>C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span></br>
     <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
     <span>ID:{{$ctrl.baseInfo.laboratoryIdentification}}</span></br>
@@ -132,7 +146,9 @@
      layout="row" layout-align="space-between center"
      class="default-label">
   <div>
-    <p>{{$ctrl.labelHeader}}</p>
+    <p>
+      {{$ctrl.labelHeader.slice(0, 13).trim()}}<span ng-show="$ctrl.labelHeader.length > 13">..</span>
+    </p>
     <div>
       <span>C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span></br>
       <span>CQ:{{$ctrl.baseInfo.cq_group}}</span></br>
