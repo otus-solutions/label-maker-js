@@ -1,7 +1,9 @@
 <!--participant-->
 <div ng-show="$ctrl.componentLabel == 'participant'"
      layout="column" layout-align="start center" class="bigger-label" xmlns="http://www.w3.org/1999/html">
-  <p>{{$ctrl.baseInfo.participant_name.slice(0, 13)}} <span ng-show="$ctrl.baseInfo.participant_name.length > 13">..</span></p>
+  <p>
+    {{$ctrl.baseInfo.participant_name.slice(0, 13).trim()}}<span ng-show="$ctrl.baseInfo.participant_name.length > 13">..</span>
+  </p>
   <div class="label-text" layout-align="space-between center" layout="row" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
     <span>{{$ctrl.baseInfo.recruitment_number}}</span>
   </div>
@@ -19,7 +21,7 @@
 <div ng-show="$ctrl.componentLabel == 'biomaterial'"
      layout="column" layout-align="start center" class="bigger-label">
   <p>
-    {{$ctrl.biomaterial.label}}
+    {{$ctrl.biomaterial.label.slice(0, 13).trim()}}<span ng-show="$ctrl.biomaterial.label.length > 13">..</span>
   </p>
   <div class="label-text" layout="row" layout-align="space-between center">
     <span>{{$ctrl.biomaterial.code}}</span>
@@ -30,7 +32,7 @@
       <span style="margin-left: 1mm" ng-show="$ctrl.baseInfo.laboratoryIdentification != null">ID:{{$ctrl.baseInfo.laboratoryIdentification}}</span>
     </div>
     <div class="label-text" ng-show="$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
-      <span>P:{{$ctrl.baseInfo.participant_name.slice(0, 13)}} <span ng-show="$ctrl.baseInfo.participant_name.length > 13">..</span></span>
+      <span>P:{{$ctrl.baseInfo.participant_name.slice(0, 13).trim()}}<span ng-show="$ctrl.baseInfo.participant_name.length > 13">..</span></span>
     </div>
     <div class="label-text" ng-show="!$ctrl.identified" layout="row" layout-align="space-between center" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
       <span>P:_______</span>
@@ -59,7 +61,9 @@
 
 <!--unattached-->
 <div ng-show="$ctrl.componentLabel == 'unattached'" layout="column" layout-align="start center" class="bigger-label">
-  <p>{{$ctrl.labelHeader}}</p>
+  <p>
+    {{$ctrl.labelHeader.slice(0, 15).trim()}}<span ng-show="$ctrl.labelHeader.length > 15">..</span>
+  </p>
   <div class="label-text" ng-style='{"overflow": "hidden","white-space": "nowrap","text-overflow": "ellipsis"}'>
     <span>C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</span>
   </div>
