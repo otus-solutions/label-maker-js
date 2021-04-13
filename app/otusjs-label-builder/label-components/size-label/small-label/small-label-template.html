@@ -63,13 +63,13 @@
 
         <p ng-show="$ctrl.type =='qrcode'">C:{{$ctrl.baseInfo.laboratoryFieldCenter}}</p>
         <p ng-show="$ctrl.baseInfo.laboratoryIdentification != null">ID:{{$ctrl.baseInfo.laboratoryIdentification}}</p>
+        <p ng-show="$ctrl.identified">
+          P:{{$ctrl.baseInfo.participant_name.slice(0, 8).trim()}}<span ng-show="$ctrl.baseInfo.participant_name.length > 8">..</span>
+        </p>
+        <p ng-show="!$ctrl.identified">P:_______</p>
+        <p ng-show="$ctrl.identified">NR:{{$ctrl.baseInfo.recruitment_number}}</p>
+        <p ng-show="!$ctrl.identified">NR:________</p>
       </div>
-      <p ng-show="$ctrl.identified">
-        P:{{$ctrl.baseInfo.participant_name.slice(0, 8).trim()}}<span ng-show="$ctrl.baseInfo.participant_name.length > 8">..</span>
-      </p>
-      <p ng-show="!$ctrl.identified">P:_______</p>
-      <p ng-show="$ctrl.identified">NR:{{$ctrl.baseInfo.recruitment_number}}</p>
-      <p ng-show="!$ctrl.identified">NR:________</p>
     </div>
   </div>
   <div class="small-unuseble-label"></div>
